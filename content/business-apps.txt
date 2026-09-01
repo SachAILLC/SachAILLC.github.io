@@ -1,19 +1,17 @@
-Title: Ledgerline
-Tagline: Bookkeeping that closes itself
-Description: Ledgerline reads invoices and receipts as they arrive, categorizes every transaction, and prepares a month-end close your accountant can approve in minutes.
-Link: https://sachai.example.com/ledgerline
+Title: Data Lineage
+Tagline: End to End Data Lineage across systems and data sources
+Description: Coming Soon!!
 ---
-Title: Frontdesk
-Tagline: An AI receptionist for small teams
-Description: Frontdesk answers calls and chats, books appointments straight into your calendar, and hands off to a human the moment a conversation needs one.
-Link: https://sachai.example.com/frontdesk
+Title: Data Governance
+Tagline: Build, Operationalize and Manage Data Governance
+Description: Coming Soon!!
+
 ---
-Title: Pipeline
-Tagline: A sales CRM that writes its own follow-ups
-Description: Pipeline drafts personalized outreach from your notes, flags deals going cold, and gives managers a plain-language summary of the week's activity.
-Link: https://sachai.example.com/pipeline
+Title: AI Risk Scanner
+Tagline: Scan AI Risk across your organization
+Description: Coming Soon!!
 ---
-Title: Shiftly
-Tagline: Workforce scheduling that balances itself
-Description: Shiftly builds staff schedules around availability, labor rules, and demand forecasts, and resolves swap requests automatically.
-Link: https://sachai.example.com/shiftly
+Title: Knowledge Graph
+Tagline: Integrate, Build Relationships Across Structured and Unstructured Data Sources
+Description: Coming Soon!!
+

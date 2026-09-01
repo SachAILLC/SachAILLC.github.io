@@ -1,14 +1,16 @@
-Title: Live Chat Demo
-Tagline: Try a Frontdesk conversation right now
-Description: A sandboxed version of our AI receptionist, preloaded with a sample business, so you can see how it handles booking questions and edge cases.
-Link: https://sachai.example.com/demos/frontdesk
+Title: Data Lineage
+Tagline: End to End Data Lineage across systems and data sources
+Description: Coming Soon!!
 ---
-Title: Ledgerline Sample Close
-Tagline: Watch a month get closed in real time
-Description: A walkthrough demo that replays a real (anonymized) close, showing how transactions get categorized and reconciled automatically.
-Link: https://sachai.example.com/demos/ledgerline
+Title: Data Governance
+Tagline: Build, Operationalize and Manage Data Governance
+Description: Coming Soon!!
+
 ---
-Title: Build-Your-Own Widget
-Tagline: A sandbox for our app-building toolkit
-Description: Describe a small app in plain English and watch our engine scaffold a working prototype, so you can feel how our development process starts.
-Link: https://sachai.example.com/demos/sandbox
+Title: AI Risk Scanner
+Tagline: Scan AI Risk across your organization
+Description: Coming Soon!!
+---
+Title: Knowledge Graph
+Tagline: Integrate, Build Relationships Across Structured and Unstructured Data Sources
+Description: Coming Soon!!
