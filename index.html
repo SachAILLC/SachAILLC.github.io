@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SachAI — App Development &amp; AI Services</title>
+<meta name="description" content="SachAI builds consumer apps, business apps, and AI-driven software services.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap head-row">
+    <a href="#" class="logotype" aria-label="SachAI home">
+      <svg class="mark" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="1" y="1" width="38" height="38" rx="4" fill="none" stroke="#c6912b" stroke-width="1.5"/>
+        <path d="M12 27 L20 11 L28 27" fill="none" stroke="#ece7dc" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="20" cy="21.5" r="2" fill="#c6912b"/>
+      </svg>
+      Sach<span class="co">AI</span>
+    </a>
+    <span class="tagline-small">App development &amp; AI services</span>
+  </div>
+  <div class="wrap">
+    <nav class="tabs" id="tabs" aria-label="Primary">
+      <button role="tab" aria-selected="true" data-section="consumer-apps">Our Consumer Apps</button>
+      <button role="tab" aria-selected="false" data-section="business-apps">Our Business Apps</button>
+      <button role="tab" aria-selected="false" data-section="services">Our Services</button>
+      <button role="tab" aria-selected="false" data-section="demos">Demos</button>
+      <span class="indicator" id="tab-indicator"></span>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="wrap hero-inner">
+    <div>
+      <h1>We build the apps, and the AI underneath them.</h1>
+      <p class="lede">SachAI is an app development studio for the AI era — we design, build, and ship consumer and business software with AI built in from day one, not added on afterward.</p>
+    </div>
+    <div class="hero-figures">
+      <div><span class="num">4</span><span class="lbl">product lines</span></div>
+      <div><span class="num">12+</span><span class="lbl">apps shipped</span></div>
+      <div><span class="num">2</span><span class="lbl">markets — consumer &amp; business</span></div>
+      <div><span class="num">100%</span><span class="lbl">AI-native builds</span></div>
+    </div>
+  </div>
+</section>
+
+<main>
+  <div class="wrap panel">
+    <div class="panel-head">
+      <h2 id="panel-title">Our Consumer Apps</h2>
+      <span class="count" id="panel-count"></span>
+    </div>
+    <p class="panel-sub" id="panel-sub">Apps we've built for everyday life, powered by AI that adapts to you.</p>
+    <div id="card-area">
+      <p class="state-msg">Loading…</p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap foot-row">
+    <span>© 2026 SachAI LLC</span>
+    <a href="mailto:hello@sachai.example.com">hello@sachai.example.com</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
