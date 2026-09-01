@@ -1,1 +1,19 @@
-
+Title: Kindra
+Tagline: An AI planner for family life
+Description: Kindra learns your household's routines and quietly handles the coordinating: shared calendars, grocery lists that write themselves, and reminders that actually land at the right moment.
+Link: https://sachai.example.com/kindra
+---
+Title: Wayfare
+Tagline: A trip-planning companion that adapts as you go
+Description: Tell Wayfare what kind of trip you want and it builds a day-by-day itinerary, then reshuffles it on the fly when your flight is delayed or a place is closed.
+Link: https://sachai.example.com/wayfare
+---
+Title: Loop
+Tagline: Journaling with an AI that remembers everything you tell it
+Description: Loop turns a few voice notes a day into a searchable journal, surfacing patterns in your mood, habits, and goals over weeks and months.
+Link: https://sachai.example.com/loop
+---
+Title: Pocket Tutor
+Tagline: One-on-one tutoring for any subject, any time
+Description: Pocket Tutor explains concepts at your pace, generates practice problems on demand, and tracks what you've mastered so review time is never wasted.
+Link: https://sachai.example.com/pocket-tutor

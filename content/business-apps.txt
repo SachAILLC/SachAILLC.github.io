@@ -1,0 +1,19 @@
+Title: Ledgerline
+Tagline: Bookkeeping that closes itself
+Description: Ledgerline reads invoices and receipts as they arrive, categorizes every transaction, and prepares a month-end close your accountant can approve in minutes.
+Link: https://sachai.example.com/ledgerline
+---
+Title: Frontdesk
+Tagline: An AI receptionist for small teams
+Description: Frontdesk answers calls and chats, books appointments straight into your calendar, and hands off to a human the moment a conversation needs one.
+Link: https://sachai.example.com/frontdesk
+---
+Title: Pipeline
+Tagline: A sales CRM that writes its own follow-ups
+Description: Pipeline drafts personalized outreach from your notes, flags deals going cold, and gives managers a plain-language summary of the week's activity.
+Link: https://sachai.example.com/pipeline
+---
+Title: Shiftly
+Tagline: Workforce scheduling that balances itself
+Description: Shiftly builds staff schedules around availability, labor rules, and demand forecasts, and resolves swap requests automatically.
+Link: https://sachai.example.com/shiftly
