@@ -1,0 +1,19 @@
+Title: Custom App Development
+Tagline: From idea to shipped product
+Description: We design and build consumer and business apps end to end, with AI woven into the product from the first sketch rather than bolted on at the end.
+Link: https://sachai.example.com/services/development
+---
+Title: AI Integration
+Tagline: Bring AI into the software you already run
+Description: We connect large language models and other AI systems to your existing tools and data, so your team gets AI features without replacing what already works.
+Link: https://sachai.example.com/services/integration
+---
+Title: Product Strategy & Design
+Tagline: Figure out what to build before you build it
+Description: We run discovery sprints, map user journeys, and prototype quickly, so you validate a product direction before committing engineering time to it.
+Link: https://sachai.example.com/services/strategy
+---
+Title: Ongoing Support & Maintenance
+Tagline: Keep your app fast, secure, and current
+Description: We monitor, patch, and improve shipped apps over time, including retraining or upgrading the AI models underneath them as better ones become available.
+Link: https://sachai.example.com/services/support

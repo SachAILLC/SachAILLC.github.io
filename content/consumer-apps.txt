@@ -1,6 +1,7 @@
 Title: TitleRiskScanner
-Tagline: Scans your Property for any risks or liens to your title
-Description: Currently available for Chicago Region Counties only:Cook, DuPage, Lake, Will, Kane, McHenry
+Tagline: Real-Time Property Title, Mortgage, Lien & Tax Risk Intelligence
+Description: Automated investigation and 24/7 monitoring across Cook, DuPage, Lake, Will, Kane, and McHenry counties. 100% private local storage.
+Link: titleriskscanner/index.html
 ---
 Title: Portfolio Optimizer
 Tagline: Coming Soon!!
