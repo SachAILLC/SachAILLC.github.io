@@ -5403,12 +5403,17 @@ async function runInvestigation() {
     }, 2200);
 
     let networkFailed = false;
-    try {
-        const resp = await fetch(getApiBase() + "/api/v1/investigate", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ address, pin, county }),
-        });
+    const apiBase = getApiBase();
+    if (!apiBase) {
+        // No active backend API server configured on this host (e.g. static web hosting)
+        networkFailed = true;
+    } else {
+        try {
+            const resp = await fetch(apiBase + "/api/v1/investigate", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ address, pin, county }),
+            });
 
         const rawText = await resp.text();
         let data = null;
@@ -5424,6 +5429,10 @@ async function runInvestigation() {
                 showAddressSuggestions(data.detail.message || "Property not found in records", data.detail.suggestions || []);
                 return;
             }
+            if (resp.status === 405 || resp.status === 404 || resp.status >= 500) {
+                networkFailed = true;
+                throw new Error("No backend service running at host (HTTP " + resp.status + ")");
+            }
             const errorMsg = (data && (data.detail || data.message)) || rawText || `HTTP ${resp.status} ${resp.statusText}`;
             throw new Error(errorMsg);
         }
@@ -5435,21 +5444,23 @@ async function runInvestigation() {
         hideLoading();
         renderResults(data);
         return;
-    } catch (e) {
-        const errStr = String((e && e.message) || e || "");
-        if (
-            e instanceof TypeError ||
-            errStr.includes("Failed to fetch") ||
-            errStr.includes("NetworkError") ||
-            errStr.includes("Load failed") ||
-            window.location.protocol === "file:" ||
-            (window.Capacitor && typeof window.Capacitor.isNativePlatform === "function" && window.Capacitor.isNativePlatform() && !window._discoveredApiBase)
-        ) {
-            networkFailed = true;
-        } else {
-            hideLoading();
-            showError(e.message || "Investigation failed");
-            return;
+        } catch (e) {
+            const errStr = String((e && e.message) || e || "");
+            if (
+                e instanceof TypeError ||
+                errStr.includes("Failed to fetch") ||
+                errStr.includes("NetworkError") ||
+                errStr.includes("Load failed") ||
+                errStr.includes("No backend") ||
+                window.location.protocol === "file:" ||
+                (window.Capacitor && typeof window.Capacitor.isNativePlatform === "function" && window.Capacitor.isNativePlatform() && !window._discoveredApiBase)
+            ) {
+                networkFailed = true;
+            } else {
+                hideLoading();
+                showError(e.message || "Investigation failed");
+                return;
+            }
         }
     }
 
