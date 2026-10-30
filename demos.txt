@@ -1,3 +1,8 @@
+Title: TitleRiskScanner Web App
+Tagline: Instant Property Title & Lien Intelligence in your browser
+Description: Run real-time property title screening, unreleased mortgage checks, and tax installment status across Northern Illinois. No installation required.
+Link: titleriskscanner/app/index.html
+---
 Title: Data Lineage
 Tagline: End to End Data Lineage across systems and data sources
 Description: Coming Soon!!
@@ -5,7 +10,6 @@ Description: Coming Soon!!
 Title: Data Governance
 Tagline: Build, Operationalize and Manage Data Governance
 Description: Coming Soon!!
-
 ---
 Title: AI Risk Scanner
 Tagline: Scan AI Risk across your organization

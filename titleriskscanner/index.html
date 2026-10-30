@@ -4,6 +4,71 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TitleRiskScanner — Property Title, Lien &amp; Tax Intelligence | SachAI</title>
+
+<link rel="canonical" href="https://sachaiapps.com/titleriskscanner/">
+<meta name="keywords" content="Cook County property title search, Chicago deed check, unreleased mortgage scanner, property tax delinquent search Illinois, DuPage County liens, real estate due diligence, title risk score">
+<meta name="author" content="SachAI LLC">
+<meta property="og:type" content="website">
+<meta property="og:title" content="TitleRiskScanner — Instant Property Title, Lien & Tax Intelligence">
+<meta property="og:description" content="Investigate Chicagoland property parcels, unreleased mortgages, liens, lis pendens, and county property tax records before you buy or close. 100% private local storage.">
+<meta property="og:url" content="https://sachaiapps.com/titleriskscanner/">
+<meta property="og:image" content="https://sachaiapps.com/logos/sachai-app-icon-1024.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="TitleRiskScanner — Property Title & Lien Intelligence">
+<meta name="twitter:description" content="Instant title risk scoring, recorded deed inspection, unreleased mortgages, and county tax rolls across Cook County and Chicagoland.">
+<meta name="twitter:image" content="https://sachaiapps.com/logos/sachai-app-icon-1024.png">
+
+<!-- Schema.org SoftwareApplication JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "TitleRiskScanner",
+  "alternateName": "TitleRisk",
+  "operatingSystem": "Web, iOS, Android, Windows, macOS",
+  "applicationCategory": "RealEstateApplication",
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "Free Edition",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    {
+      "@type": "Offer",
+      "name": "Plus Edition",
+      "price": "99",
+      "priceCurrency": "USD",
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "99",
+        "priceCurrency": "USD",
+        "unitText": "YEAR"
+      }
+    },
+    {
+      "@type": "Offer",
+      "name": "Pro Edition",
+      "price": "149",
+      "priceCurrency": "USD",
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "149",
+        "priceCurrency": "USD",
+        "unitText": "YEAR"
+      }
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "SachAI LLC",
+    "url": "https://sachaiapps.com",
+    "logo": "https://sachaiapps.com/logos/sachai-app-icon-1024.png"
+  },
+  "description": "Property Title Risk, Chain of Title, and Lien Intelligence Scanner for the Chicago metropolitan region."
+}
+</script>
+
 <meta name="description" content="TitleRiskScanner automatically investigates Chicagoland property parcels, unreleased mortgages, liens, lis pendens, and county property tax records. 100% private local storage.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -186,6 +251,168 @@
     padding: 6px 0;
     border-bottom: 1px solid rgba(236, 231, 220, 0.08);
   }
+
+  /* Platform Cards & Waitlist Section */
+  .platform-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin: 28px 0;
+  }
+  .platform-card {
+    background: var(--ink-2);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.15s ease, border-color 0.15s ease;
+  }
+  .platform-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--brass);
+  }
+  .platform-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+  }
+  .platform-icon {
+    font-size: 28px;
+  }
+  .platform-status-badge {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 4px 8px;
+    border-radius: 12px;
+  }
+  .status-live {
+    background: rgba(63, 185, 80, 0.18);
+    color: #3fb950;
+    border: 1px solid rgba(63, 185, 80, 0.4);
+  }
+  .status-review {
+    background: rgba(210, 153, 34, 0.18);
+    color: #d29922;
+    border: 1px solid rgba(210, 153, 34, 0.4);
+  }
+  .platform-title {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    color: var(--paper);
+    margin: 0 0 6px;
+  }
+  .platform-desc {
+    font-size: 0.88rem;
+    color: var(--paper-dim);
+    line-height: 1.45;
+    margin: 0 0 16px;
+  }
+  .platform-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-family: var(--font-display);
+    font-size: 0.88rem;
+    font-weight: 600;
+    padding: 10px 14px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.15s ease;
+  }
+  .platform-btn-primary {
+    background: var(--brass);
+    color: var(--ink);
+  }
+  .platform-btn-primary:hover {
+    background: var(--brass-light);
+  }
+  .platform-btn-secondary {
+    background: var(--ink-3, #1e2630);
+    color: var(--paper);
+    border: 1px solid var(--line-strong);
+  }
+  .platform-btn-secondary:hover {
+    border-color: var(--brass);
+    color: var(--brass-light);
+  }
+
+  /* Waitlist Form Box */
+  .waitlist-box {
+    background: linear-gradient(145deg, #162436 0%, #111a26 100%);
+    border: 1px solid #1f6feb;
+    border-radius: 8px;
+    padding: 36px 32px;
+    margin: 40px 0;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.4);
+  }
+  .waitlist-title {
+    font-family: var(--font-display);
+    font-size: 1.7rem;
+    color: var(--paper);
+    margin: 0 0 8px;
+  }
+  .waitlist-sub {
+    font-size: 1.05rem;
+    color: #8b949e;
+    margin: 0 0 24px;
+    max-width: 680px;
+    line-height: 1.5;
+  }
+  .waitlist-form-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    max-width: 600px;
+  }
+  .waitlist-input {
+    flex: 1;
+    min-width: 260px;
+    background: #0d1117;
+    border: 1px solid #30363d;
+    color: #f0f6fc;
+    padding: 12px 16px;
+    border-radius: 4px;
+    font-size: 1rem;
+    outline: none;
+  }
+  .waitlist-input:focus {
+    border-color: #58a6ff;
+    box-shadow: 0 0 0 3px rgba(88,166,255,0.2);
+  }
+  .waitlist-btn {
+    background: #238636;
+    color: #ffffff;
+    border: 1px solid #2ea043;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s ease;
+  }
+  .waitlist-btn:hover {
+    background: #2ea043;
+  }
+  .waitlist-checks {
+    display: flex;
+    gap: 20px;
+    margin-top: 14px;
+    font-size: 0.9rem;
+    color: #c9d1d9;
+  }
+  .waitlist-checks label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+  }
+
 </style>
 </head>
 <body>
@@ -224,14 +451,111 @@
     </div>
 
     <div class="cta-group">
-      <a href="mailto:info@sachaiapps.com?subject=TitleRiskScanner%20Inquiry" class="btn-primary">Contact Sales &amp; Inquiries</a>
-      <a href="privacy.html" class="btn-secondary">View Privacy Policy</a>
-      <a href="terms.html" class="btn-secondary">Terms &amp; Disclaimers</a>
+      <a href="app/" class="btn-primary" style="background:#238636; border:1px solid #2ea043; color:#fff;">
+        <span>🚀 Launch Web Scanner</span>
+        <span style="font-size:11px; opacity:0.85; padding-left:4px;">(No Install Needed)</span>
+      </a>
+      <a href="#waitlist" class="btn-secondary">
+        <span>📱 Mobile App Waitlist</span>
+      </a>
+      <a href="../downloads/1.4/TitleRiskScanner_Setup_v1.4.exe" class="btn-secondary" download>
+        <span>💻 Windows Installer (.exe)</span>
+      </a>
+      <a href="../downloads/1.4/TitleRiskScanner_Android_v1.4.1.apk" class="btn-secondary" download>
+        <span>🤖 Android APK</span>
+      </a>
     </div>
   </div>
 </section>
 
 <main class="wrap" style="padding-top: 48px; padding-bottom: 60px;">
+  
+  <!-- Platform Availability & Mobile Waitlist Section -->
+  <section id="waitlist" style="margin-bottom: 48px;">
+    <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:12px; margin-bottom:12px;">
+      <h2 style="font-family: var(--font-display); font-size: 1.8rem; margin:0;">Platform Availability</h2>
+      <span style="color:var(--paper-dim); font-size:0.9rem;">Run instantly in your browser or install on your device</span>
+    </div>
+
+    <div class="platform-grid">
+      <!-- 1. Web App -->
+      <div class="platform-card" style="border-color:#2ea043;">
+        <div>
+          <div class="platform-card-header">
+            <span class="platform-icon">🌐</span>
+            <span class="platform-status-badge status-live">Live Now</span>
+          </div>
+          <h3 class="platform-title">Instant Web Scanner</h3>
+          <p class="platform-desc">Runs directly in Safari, Chrome, Edge, and Firefox. Tap "Add to Home Screen" on iOS & Android to install as a standalone PWA.</p>
+        </div>
+        <a href="app/" class="platform-btn platform-btn-primary" style="background:#238636; color:#fff;">Launch in Browser &rarr;</a>
+      </div>
+
+      <!-- 2. Windows -->
+      <div class="platform-card">
+        <div>
+          <div class="platform-card-header">
+            <span class="platform-icon">💻</span>
+            <span class="platform-status-badge status-live">Available</span>
+          </div>
+          <h3 class="platform-title">Windows PC</h3>
+          <p class="platform-desc">Published for Windows 10 & 11. High-performance offline caching and native Windows desktop notifications.</p>
+        </div>
+        <a href="../downloads/1.4/TitleRiskScanner_Setup_v1.4.exe" class="platform-btn platform-btn-secondary" download>Download Setup (.exe)</a>
+      </div>
+
+      <!-- 3. Android -->
+      <div class="platform-card">
+        <div>
+          <div class="platform-card-header">
+            <span class="platform-icon">🤖</span>
+            <span class="platform-status-badge status-review">Play Store Review</span>
+          </div>
+          <h3 class="platform-title">Google Play (Android)</h3>
+          <p class="platform-desc">Submitted to Google Play production review. Want it now? You can install the signed APK directly.</p>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:8px;">
+          <a href="../downloads/1.4/TitleRiskScanner_Android_v1.4.1.apk" class="platform-btn platform-btn-secondary" download>Direct APK Download</a>
+          <button type="button" onclick="focusWaitlistEmail()" class="platform-btn platform-btn-secondary" style="cursor:pointer; background:none;">Notify on Play Store Live</button>
+        </div>
+      </div>
+
+      <!-- 4. iOS -->
+      <div class="platform-card">
+        <div>
+          <div class="platform-card-header">
+            <span class="platform-icon">🍎</span>
+            <span class="platform-status-badge status-review">App Store Review</span>
+          </div>
+          <h3 class="platform-title">Apple iOS (iPhone/iPad)</h3>
+          <p class="platform-desc">Currently in Apple App Review. Enter your email below to be notified the minute it becomes downloadable on the App Store.</p>
+        </div>
+        <button type="button" onclick="focusWaitlistEmail()" class="platform-btn platform-btn-secondary" style="cursor:pointer; width:100%;">Get Notified on Launch</button>
+      </div>
+    </div>
+
+    <!-- Waitlist Signup Banner Box -->
+    <div class="waitlist-box">
+      <h3 class="waitlist-title">📱 Join the Mobile App Priority Waitlist</h3>
+      <p class="waitlist-sub">
+        Want TitleRiskScanner installed directly from the <strong>Apple App Store</strong> or <strong>Google Play</strong>? Enter your email and we'll send you an instant notification the second either store goes live.
+      </p>
+      <form id="landingWaitlistForm" onsubmit="submitLandingWaitlist(event)">
+        <div class="waitlist-form-row">
+          <input type="email" id="landingWaitlistEmail" class="waitlist-input" placeholder="Enter your email address" required>
+          <button type="submit" id="landingWaitlistBtn" class="waitlist-btn">Join Priority Waitlist</button>
+        </div>
+        <div class="waitlist-checks">
+          <label><input type="checkbox" id="checkIos" checked> 🍎 Apple App Store (iOS)</label>
+          <label><input type="checkbox" id="checkAndroid" checked> 🤖 Google Play (Android)</label>
+        </div>
+      </form>
+      <div id="landingWaitlistSuccess" style="display:none; color:#3fb950; font-size:1.1rem; font-weight:600; margin-top:16px;">
+        🎉 You're on the priority waitlist! We will notify you immediately once the mobile apps are live.
+      </div>
+    </div>
+  </section>
+
   <h2 style="font-family: var(--font-display); font-size: 1.8rem; margin: 0 0 16px;">Core Capabilities</h2>
   
   <div class="grid-3">
@@ -355,6 +679,78 @@
     </div>
   </div>
 </footer>
+
+
+<script>
+function focusWaitlistEmail() {
+  const el = document.getElementById("landingWaitlistEmail");
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    el.focus();
+  }
+}
+
+async function submitLandingWaitlist(e) {
+  e.preventDefault();
+  const emailInput = document.getElementById("landingWaitlistEmail");
+  const email = emailInput ? emailInput.value : "";
+  const ios = document.getElementById("checkIos") ? document.getElementById("checkIos").checked : true;
+  const android = document.getElementById("checkAndroid") ? document.getElementById("checkAndroid").checked : true;
+  const platforms = [];
+  if (ios) platforms.push("iOS / App Store");
+  if (android) platforms.push("Android / Google Play");
+  const platStr = platforms.join(", ") || "Both";
+
+  const btn = document.getElementById("landingWaitlistBtn");
+  if (btn) {
+    btn.disabled = true;
+    btn.textContent = "Submitting...";
+  }
+
+  try {
+    await fetch("https://formsubmit.co/ajax/info@sachaiapps.com", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify({
+        _subject: "TitleRiskScanner Mobile Waitlist: " + email,
+        email: email,
+        platforms: platStr,
+        source: "TitleRiskScanner Landing Page (sachaiapps.com/titleriskscanner/)",
+        timestamp: new Date().toISOString()
+      })
+    });
+  } catch (err) {
+    console.warn("FormSubmit notice:", err);
+  }
+
+  try {
+    localStorage.setItem("trs_waitlist_joined", email);
+  } catch (_) {}
+
+  const form = document.getElementById("landingWaitlistForm");
+  const success = document.getElementById("landingWaitlistSuccess");
+  if (form) form.style.display = "none";
+  if (success) success.style.display = "block";
+}
+
+(function checkLandingWaitlist() {
+  try {
+    const saved = localStorage.getItem("trs_waitlist_joined");
+    if (saved) {
+      const form = document.getElementById("landingWaitlistForm");
+      const success = document.getElementById("landingWaitlistSuccess");
+      if (form) form.style.display = "none";
+      if (success) {
+        success.style.display = "block";
+        success.textContent = "✓ You are on the priority waitlist (" + saved + "). We will email you the moment apps are live!";
+      }
+    }
+  } catch (_) {}
+})();
+</script>
 
 </body>
 </html>
