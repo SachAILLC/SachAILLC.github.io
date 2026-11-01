@@ -72,6 +72,19 @@ header.site-head {
   flex-wrap: wrap;
 }
 
+
+.logotype .brand-logo-img {
+  height: 42px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+.logotype:hover .brand-logo-img {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
 .logotype {
   display: flex;
   align-items: center;
