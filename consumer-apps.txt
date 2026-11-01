@@ -1,7 +1,8 @@
-Title: TitleRiskScanner
+Title: Title Risk Scanner (TitleRiskScanner)
 Tagline: Real-Time Property Title, Mortgage, Lien & Tax Risk Intelligence
-Description: Automated investigation and 24/7 monitoring across Cook, DuPage, Lake, Will, Kane, and McHenry counties. 100% private local storage.
+Description: Automated property title due diligence, unreleased mortgage detection, and lien cloud analysis across Cook, DuPage, Lake, Will, Kane, and McHenry counties. 100% private local storage. Available on Web, Google Play, and Microsoft Store.
 Link: titleriskscanner/index.html
+LinkLabel: Explore App & Features →
 ---
 Title: Portfolio Optimizer
 Tagline: Coming Soon!!
