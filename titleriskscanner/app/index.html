@@ -2813,8 +2813,9 @@
 <div id="trsWaitlistBanner" class="trs-waitlist-banner">
     <div class="trs-waitlist-content">
         <span class="trs-waitlist-icon">📱</span>
-        <span id="trsWaitlistBannerText" class="trs-waitlist-text"><strong>TitleRiskScanner iOS &amp; Android Apps</strong> are in final store review.</span>
-        <button type="button" id="trsWaitlistBannerBtn" class="trs-waitlist-btn" onclick="openWaitlistModal()">Join Mobile Waitlist</button>
+        <span id="trsWaitlistBannerText" class="trs-waitlist-text">🎉 <strong>TitleRiskScanner is now LIVE on Google Play!</strong> (iOS App Store in final review)</span>
+        <a href="https://play.google.com/store/apps/details?id=com.sachai.titleriskscanner" target="_blank" rel="noopener" class="trs-waitlist-btn" style="background:#0b6e6e; border-color:#0d8484; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">🤖 Get on Google Play</a>
+        <button type="button" id="trsWaitlistBannerBtn" class="trs-waitlist-btn" onclick="openWaitlistModal()">🍎 iOS Waitlist</button>
     </div>
     <button type="button" class="trs-waitlist-close" onclick="dismissWaitlistBanner()" title="Dismiss">&times;</button>
 </div>
@@ -3201,7 +3202,7 @@
 
     <div class="footer" style="margin-top: 40px; padding: 20px 0; border-top: 1px solid var(--trs-border-subtle); display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: var(--trs-text-muted); flex-wrap: wrap; gap: 12px;">
         <div>
-            <span id="footerEditionText">TitleRiskScanner Free Edition &bull; v1.4.0 (Build 20261002.1 &bull; 2026-10-02) &bull; Developed by <strong style="color:var(--trs-text-secondary)">SachAI LLC</strong> &bull; 2026</span>
+            <span id="footerEditionText">TitleRiskScanner Free Edition &bull; v1.4.2 (Build 20261101.1 &bull; 2026-11-01) &bull; Developed by <strong style="color:var(--trs-text-secondary)">SachAI LLC</strong> &bull; 2026</span>
         </div>
         <div style="display: flex; gap: 16px;">
             <button type="button" onclick="openHelpModal('instructions')" style="background:none; border:none; padding:0; color:var(--trs-text-muted); cursor:pointer; font-size:12px; text-decoration:none;">Instructions</button>
@@ -4021,7 +4022,7 @@
                 </div>
                 <div class="about-card">
                     <div class="about-card-label">Version &amp; Build Stamp</div>
-                    <div class="about-card-value" id="aboutVersionBuildValue">v1.4.0 (Build 20261019.1)</div>
+                    <div class="about-card-value" id="aboutVersionBuildValue">v1.4.2 (Build 20261101.1)</div>
                 </div>
                 <div class="about-card">
                     <div class="about-card-label">Release Date</div>
@@ -4051,7 +4052,7 @@
                 <li><strong>macOS App Data:</strong> <code>~/Library/Application Support/TitleRiskScanner/</code></li>
                 <li><strong>Windows Log Path:</strong> <code>%LOCALAPPDATA%\TitleRiskScanner\logs\</code></li>
             </ul>
-            <p>To report a problem, include your build stamp (<strong id="aboutBuildStampCode">v1.4.0-build.20261019.1</strong>) and log file when emailing:</p>
+            <p>To report a problem, include your build stamp (<strong id="aboutBuildStampCode">v1.4.2-build.20261101.1</strong>) and log file when emailing:</p>
             <p><strong>SachAI LLC Support:</strong> <a id="aboutSupportLink" href="mailto:info@sachaiapps.com?subject=TitleRiskScanner%20v1.4.0%20(Build%2020261019.1)%20Issue%20Report" style="color:#58a6ff;text-decoration:none">info@sachaiapps.com</a></p>
         </div>
 
@@ -4269,11 +4270,11 @@
 <script>
 window.BUILD_HOST_LAN_URL = "http://192.168.50.1:8000";
 // ---------- Centralized Version & Build Metadata (Frozen v1.4.0) ----------
-window.APP_VERSION = "1.4.0";
-window.BUILD_DATE = "2026-10-19";
-window.BUILD_NUMBER = "20261019.1";
-window.BUILD_STAMP = "v1.4.0-build.20261019.1";
-window.BUILD_DISPLAY = "v1.4.0 (Build 20261019.1 * 2026-10-19)";
+window.APP_VERSION = "1.4.2";
+window.BUILD_DATE = "2026-11-01";
+window.BUILD_NUMBER = "20261101.1";
+window.BUILD_STAMP = "v1.4.2-build.20261101.1";
+window.BUILD_DISPLAY = "v1.4.2 (Build 20261101.1 · 2026-11-01)";
 
 function updateBuildInfoUI() {
     try {
