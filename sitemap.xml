@@ -1,22 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://sachaiapps.com/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://sachaiapps.com/logos/sachai-full-logo-with-url-4096x2304.png</image:loc>
+      <image:title>SachAI — AI-Native Consumer and Business Applications</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://sachaiapps.com/titleriskscanner/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.9</priority>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://sachaiapps.com/titleriskscanner/assets/social-preview.png</image:loc>
+      <image:title>TitleRiskScanner Chicagoland Property Title and Lien Intelligence</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sachaiapps.com/titleriskscanner/assets/01_search_portal.png</image:loc>
+      <image:title>Cook County Property Search by Address or PIN</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sachaiapps.com/titleriskscanner/assets/02_title_risk_scorecard.png</image:loc>
+      <image:title>Title Risk Scorecard 0 to 100 Due Diligence Report</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sachaiapps.com/titleriskscanner/assets/03_recorded_documents.png</image:loc>
+      <image:title>Recorded Mortgages, Warranty Deeds, and Release Timeline</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sachaiapps.com/titleriskscanner/assets/04_liens_and_clouds.png</image:loc>
+      <image:title>Property Tax Rolls and Unreleased Lien Cloud Analysis</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://sachaiapps.com/titleriskscanner/app/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://sachaiapps.com/privacy.html</loc>
