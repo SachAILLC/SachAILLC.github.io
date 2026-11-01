@@ -17,9 +17,14 @@ const SECTIONS = {
     file: "content/business-apps.txt",
   },
   "services": {
-    title: "Our Services",
-    sub: "How we work with clients who want an app or an AI feature built for them.",
+    title: "Our Services & Capabilities",
+    sub: "Enterprise AI architecture, data governance advisory, and technical implementations by Satya Sachdeva.",
     file: "content/services.txt",
+  },
+  "articles": {
+    title: "Articles & Insights",
+    sub: "Thought leadership, architectural perspectives, and technical publications by Satya Sachdeva.",
+    file: "content/articles.txt",
   },
   "demos": {
     title: "Demos",
@@ -38,7 +43,7 @@ function parseEntries(raw) {
     .map((block) => {
       const entry = {};
       block.split("\n").forEach((line) => {
-        const m = line.match(/^\s*(Title|Tagline|Description|Link)\s*:\s*(.*)$/i);
+        const m = line.match(/^\s*(Title|Tagline|Description|Link|LinkLabel)\s*:\s*(.*)$/i);
         if (m) entry[m[1].toLowerCase()] = m[2].trim();
       });
       return entry;
@@ -57,8 +62,9 @@ function renderCards(entries) {
   entries.forEach((e) => {
     const card = document.createElement("article");
     card.className = "card";
+    const label = e.linklabel || (e.link && e.link.includes("linkedin.com") ? "Read on LinkedIn →" : "Learn more →");
     const linkHtml = e.link
-      ? `<a class="card-link" href="${escapeAttr(e.link)}" target="_blank" rel="noopener">Learn more</a>`
+      ? `<a class="card-link" href="${escapeAttr(e.link)}" target="_blank" rel="noopener">${escapeHtml(label)}</a>`
       : "";
     card.innerHTML = `
       <h3>${escapeHtml(e.title)}</h3>

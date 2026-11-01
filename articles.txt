@@ -1,0 +1,47 @@
+Title: Agentic AI vs AI Agents - Are you still confused?
+Tagline: LinkedIn Article • Satya Sachdeva
+Description: Clarifying the critical architectural distinctions between simple goal-driven AI agents and truly autonomous agentic systems capable of recursive planning, memory persistence, and dynamic tool orchestration.
+Link: https://www.linkedin.com/in/satya-sachdeva-b4628b/
+LinkLabel: Read on LinkedIn →
+---
+Title: Effective Data Governance with AI
+Tagline: LinkedIn Pulse • Enterprise Data Architecture
+Description: An in-depth examination of how modern enterprises can deploy AI to automate policy enforcement, sensitive data classification, and regulatory compliance without introducing operational drag.
+Link: https://www.linkedin.com/pulse/effective-data-governance-ai-satya-sachdeva-g7c0c/
+LinkLabel: Read on LinkedIn →
+---
+Title: Cross-System Data Lineage: Giving Every Data Journey a Passport
+Tagline: LinkedIn Pulse • Data Provenance & Trust
+Description: Why modern distributed data architectures require universal data passports to track origin, transformations, and custody across heterogeneous clouds and data stores.
+Link: https://www.linkedin.com/pulse/cross-system-data-lineage-giving-every-journey-satya-sachdeva-gg82c/
+LinkLabel: Read on LinkedIn →
+---
+Title: Cross System Data Lineage
+Tagline: LinkedIn Pulse • Technical Architecture
+Description: Practical blueprint for designing resilient cross-system lineage capture mechanisms, handling schema evolutions, and ensuring end-to-end traceability for compliance audits.
+Link: https://www.linkedin.com/pulse/cross-system-data-lineage-satya-sachdeva-2ltyc/
+LinkLabel: Read on LinkedIn →
+---
+Title: AI Scanning Engine
+Tagline: LinkedIn Pulse • Intelligent Document Processing
+Description: Architectural deep-dive into building high-accuracy AI scanning engines for unstructured documents, complex property records, legal deeds, and automated risk detection algorithms.
+Link: https://www.linkedin.com/pulse/ai-scanning-engine-satya-sachdeva-fie3c/
+LinkLabel: Read on LinkedIn →
+---
+Title: From Unstructured Rules to Actionable Graph: Payment Detection with Memgraph
+Tagline: Crowdcast Technical Talk • Graph Analytics
+Description: Real-world methodology for translating complex, unstructured compliance rules into graph traversals to detect improper payments, fraudulent patterns, and transaction anomalies in real time.
+Link: https://www.crowdcast.io/c/from-unstructured-rules-to-actionable-graph-previsant-approach-to-payment-detection-with-memgraph
+LinkLabel: Watch on Crowdcast →
+---
+Title: Quantum Computing in 2026 — Trends, Challenges & the Race for Error Correction
+Tagline: Medium Publication • Frontier Research
+Description: Comprehensive analysis of the state of quantum computing in 2026: progress in fault-tolerant quantum error correction, logical qubit benchmarks, physical architecture trade-offs, and commercial horizons.
+Link: https://medium.com/@satyasacheva/quantum-computing-in-2026-trends-challenges-the-race-for-error-correction-3766b0097b12
+LinkLabel: Read on Medium →
+---
+Title: Satya Sachdeva — Principal Architect & Founder
+Tagline: LinkedIn Profile & Professional Portfolio
+Description: Connect with Satya Sachdeva on LinkedIn to follow ongoing research, discuss enterprise AI & data architecture consulting, or explore collaborations on AI-native applications.
+Link: https://www.linkedin.com/in/satya-sachdeva-b4628b/
+LinkLabel: View LinkedIn Profile →

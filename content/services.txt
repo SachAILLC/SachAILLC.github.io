@@ -1,19 +1,41 @@
-Title: Custom App Development
-Tagline: From idea to shipped product
-Description: We design and build consumer and business apps end to end, with AI woven into the product from the first sketch rather than bolted on at the end.
-Link: https://sachai.example.com/services/development
+Title: Agentic AI & Autonomous Systems
+Tagline: Architecting intelligent decision-making agents
+Description: We design and build enterprise AI solutions and agentic architectures that take autonomous action, coordinate multi-agent workflows, and adapt to complex domain environments. Read our architectural perspective: "Agentic AI vs AI Agents - Are you still confused?".
+Link: https://www.linkedin.com/in/satya-sachdeva-b4628b/
+LinkLabel: Read on LinkedIn →
 ---
-Title: AI Integration
-Tagline: Bring AI into the software you already run
-Description: We connect large language models and other AI systems to your existing tools and data, so your team gets AI features without replacing what already works.
-Link: https://sachai.example.com/services/integration
+Title: AI Scanning & Document Intelligence Engines
+Tagline: Automated legal, title & unstructured risk extraction
+Description: Custom high-throughput document intelligence pipelines that parse complex legal deeds, mortgages, municipal codes, and unstructured regulatory filings into structured, actionable graphs. Powers our flagship TitleRiskScanner platform.
+Link: https://www.linkedin.com/pulse/ai-scanning-engine-satya-sachdeva-fie3c/
+LinkLabel: Read on LinkedIn →
 ---
-Title: Product Strategy & Design
-Tagline: Figure out what to build before you build it
-Description: We run discovery sprints, map user journeys, and prototype quickly, so you validate a product direction before committing engineering time to it.
-Link: https://sachai.example.com/services/strategy
+Title: Cross-System Data Lineage & Governance
+Tagline: Giving every data journey a passport
+Description: End-to-end data provenance tracking across distributed enterprise platforms. We architect automated lineage tracing, schema migration mapping, and audit-ready governance pipelines for regulated industries.
+Link: https://www.linkedin.com/pulse/cross-system-data-lineage-giving-every-journey-satya-sachdeva-gg82c/
+LinkLabel: Read on LinkedIn →
 ---
-Title: Ongoing Support & Maintenance
-Tagline: Keep your app fast, secure, and current
-Description: We monitor, patch, and improve shipped apps over time, including retraining or upgrading the AI models underneath them as better ones become available.
-Link: https://sachai.example.com/services/support
+Title: Graph Analytics & Improper Payment Detection
+Tagline: Turning unstructured rules into actionable graph queries
+Description: Transforming complex unstructured compliance rules and transaction histories into high-performance graph algorithms (Memgraph/Neo4j) to detect fraud, anomalies, and improper payments in real time.
+Link: https://www.crowdcast.io/c/from-unstructured-rules-to-actionable-graph-previsant-approach-to-payment-detection-with-memgraph
+LinkLabel: Watch on Crowdcast →
+---
+Title: Effective Data Governance with AI
+Tagline: Intelligent policy enforcement & automated cataloging
+Description: Advisory and technical implementations leveraging generative AI to streamline compliance, enforce data security standards, and eliminate manual cataloging bottlenecks across enterprise data estates.
+Link: https://www.linkedin.com/pulse/effective-data-governance-ai-satya-sachdeva-g7c0c/
+LinkLabel: Read on LinkedIn →
+---
+Title: Quantum Computing & Advanced Tech Advisory
+Tagline: Preparing enterprise architecture for the post-quantum era
+Description: Technical evaluation and strategic roadmapping on quantum computing developments, hardware trends, error correction milestones, and quantum-resistant cryptographic preparation.
+Link: https://medium.com/@satyasacheva/quantum-computing-in-2026-trends-challenges-the-race-for-error-correction-3766b0097b12
+LinkLabel: Read on Medium →
+---
+Title: Custom AI App Development & Strategy
+Tagline: From concept to production deployment
+Description: End-to-end software engineering and product strategy for AI-native consumer and business applications. Led by Principal Architect Satya Sachdeva.
+Link: https://www.linkedin.com/in/satya-sachdeva-b4628b/
+LinkLabel: Connect on LinkedIn →
