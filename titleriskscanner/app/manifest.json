@@ -2,21 +2,20 @@
   "name": "TitleRiskScanner — Property Title & Lien Intelligence",
   "short_name": "TitleRisk",
   "description": "Property Title Risk, Chain of Title, and Lien Intelligence Scanner (Free, Plus & Pro)",
-  "start_url": "./index.html",
-  "scope": "./",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#0f1117",
   "theme_color": "#0f1117",
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "./assets/app_icon.png",
+      "src": "/assets/icon.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "./assets/icon.png",
+      "src": "/assets/icon.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"

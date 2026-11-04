@@ -8,11 +8,11 @@
     <meta name="apple-mobile-web-app-title" content="TitleRisk">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="theme-color" content="#0f1117">
-    <link rel="manifest" href="manifest.json">
-    <link rel="apple-touch-icon" href="assets/app_icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/icon.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/app_icon.png">
-    <link rel="icon" type="image/png" href="assets/app_icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/assets/app_icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icon-64.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/icon-192.png">
+    <link rel="icon" type="image/png" href="/assets/app_icon.png">
     <title>TitleRiskScanner — Property Title & Lien Intelligence</title>
     <style>
         /* ==========================================================================
@@ -2659,198 +2659,9 @@
             color: #1f2328 !important;
         }
 
-    
-        /* Mobile App Waitlist Notification & Modal */
-        .trs-waitlist-banner {
-            background: linear-gradient(90deg, #162436 0%, #0d1b2a 100%);
-            border-bottom: 1px solid #1f6feb;
-            color: #f0f6fc;
-            padding: 10px 16px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            font-size: 13px;
-            position: relative;
-            z-index: 1000;
-        }
-        .trs-waitlist-content {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-        .trs-waitlist-icon {
-            font-size: 16px;
-        }
-        .trs-waitlist-btn {
-            background: #238636;
-            color: #ffffff;
-            border: 1px solid #2ea043;
-            border-radius: 4px;
-            padding: 5px 12px;
-            font-size: 12px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background 0.15s ease;
-        }
-        .trs-waitlist-btn:hover {
-            background: #2ea043;
-        }
-        .trs-waitlist-close {
-            background: none;
-            border: none;
-            color: #8b949e;
-            font-size: 20px;
-            cursor: pointer;
-            padding: 0 4px;
-            line-height: 1;
-        }
-        .trs-waitlist-close:hover {
-            color: #f0f6fc;
-        }
-        .trs-modal-overlay {
-            position: fixed;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(0,0,0,0.75);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 100000;
-            padding: 16px;
-        }
-        .trs-modal-card {
-            background: #161b22;
-            border: 1px solid #30363d;
-            border-radius: 8px;
-            max-width: 460px;
-            width: 100%;
-            padding: 24px;
-            box-shadow: 0 16px 32px rgba(0,0,0,0.6);
-            color: #c9d1d9;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            position: relative;
-        }
-        .trs-modal-title {
-            color: #f0f6fc;
-            font-size: 18px;
-            font-weight: 700;
-            margin: 0 0 8px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .trs-modal-text {
-            font-size: 13px;
-            line-height: 1.5;
-            color: #8b949e;
-            margin: 0 0 16px;
-        }
-        .trs-pref-row {
-            display: flex;
-            gap: 16px;
-            margin-bottom: 16px;
-        }
-        .trs-pref-label {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 13px;
-            color: #f0f6fc;
-            cursor: pointer;
-        }
-        .trs-input-email {
-            width: 100%;
-            box-sizing: border-box;
-            background: #0d1117;
-            border: 1px solid #30363d;
-            color: #f0f6fc;
-            padding: 10px 12px;
-            border-radius: 6px;
-            font-size: 14px;
-            margin-bottom: 16px;
-            outline: none;
-        }
-        .trs-input-email:focus {
-            border-color: #58a6ff;
-            box-shadow: 0 0 0 3px rgba(88,166,255,0.2);
-        }
-        .trs-submit-btn {
-            width: 100%;
-            background: #238636;
-            color: #ffffff;
-            border: 1px solid #2ea043;
-            padding: 11px;
-            border-radius: 6px;
-            font-size: 14px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background 0.15s ease;
-        }
-        .trs-submit-btn:hover {
-            background: #2ea043;
-        }
-        .trs-apk-note {
-            margin-top: 14px;
-            padding-top: 12px;
-            border-top: 1px solid #21262d;
-            font-size: 12px;
-            color: #8b949e;
-            text-align: center;
-        }
-        .trs-apk-note a {
-            color: #58a6ff;
-            text-decoration: none;
-        }
-        .trs-apk-note a:hover {
-            text-decoration: underline;
-        }
-
     </style>
 </head>
 <body>
-
-<!-- Mobile App Launch Notice & Waitlist Banner -->
-<div id="trsWaitlistBanner" class="trs-waitlist-banner">
-    <div class="trs-waitlist-content">
-        <span class="trs-waitlist-icon">📱</span>
-        <span id="trsWaitlistBannerText" class="trs-waitlist-text">🎉 <strong>TitleRiskScanner is now LIVE on Google Play!</strong> (iOS App Store in final review)</span>
-        <a href="https://play.google.com/store/apps/details?id=com.sachai.titleriskscanner" target="_blank" rel="noopener" class="trs-waitlist-btn" style="background:#0b6e6e; border-color:#0d8484; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">🤖 Get on Google Play</a>
-        <button type="button" id="trsWaitlistBannerBtn" class="trs-waitlist-btn" onclick="openWaitlistModal()">🍎 iOS Waitlist</button>
-    </div>
-    <button type="button" class="trs-waitlist-close" onclick="dismissWaitlistBanner()" title="Dismiss">&times;</button>
-</div>
-
-<!-- Mobile Waitlist Modal -->
-<div id="trsWaitlistModal" class="trs-modal-overlay" style="display:none;" onclick="handleModalOverlayClick(event)">
-    <div class="trs-modal-card" onclick="event.stopPropagation()">
-        <button type="button" class="trs-waitlist-close" style="position:absolute; top:14px; right:14px;" onclick="closeWaitlistModal()">&times;</button>
-        <div class="trs-modal-title"><span>📱</span> Get Notified for Mobile Stores</div>
-        <p class="trs-modal-text">
-            TitleRiskScanner for <strong>iPhone (Apple App Store)</strong> and <strong>Android (Google Play)</strong> are pending store review. Enter your email to be the first to know the moment they go live.
-        </p>
-        <form id="trsWaitlistForm" onsubmit="submitWaitlistForm(event)">
-            <div class="trs-pref-row">
-                <label class="trs-pref-label">
-                    <input type="checkbox" id="waitlistIos" name="platform" value="iOS" checked>
-                    <span>🍎 iPhone / iPad</span>
-                </label>
-                <label class="trs-pref-label">
-                    <input type="checkbox" id="waitlistAndroid" name="platform" value="Android" checked>
-                    <span>🤖 Android</span>
-                </label>
-            </div>
-            <input type="email" id="waitlistEmail" class="trs-input-email" placeholder="name@domain.com" required>
-            <button type="submit" id="waitlistSubmitBtn" class="trs-submit-btn">Notify Me On Launch</button>
-        </form>
-        <div id="waitlistSuccessMsg" style="display:none; color:#3fb950; font-size:13px; font-weight:600; text-align:center; padding:12px 0;">
-            🎉 Thank you! You're on the priority notification list.
-        </div>
-        <div class="trs-apk-note">
-            Using Android right now? <a href="../downloads/1.4/TitleRiskScanner_Android_v1.4.1.apk" download>Download the Android APK directly</a> (no waiting required).
-        </div>
-    </div>
-</div>
-
 
 <noscript>
     <div style="background:#b32d2e; color:#ffffff; padding:16px 20px; text-align:center; font-size:14px; font-weight:600; line-height:1.5; border-bottom:2px solid #e5534b; position:sticky; top:0; z-index:99999;">
@@ -3095,14 +2906,13 @@
 
         <div class="section-panel active" id="panel-findings">
             <div class="stats-row" id="statsRow"></div>
-
-        <div class="next-steps-card" id="nextStepsCard">
-            <div class="next-steps-header">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 11 3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
-                <h3>Recommended Due Diligence Next Steps</h3>
+            <div class="next-steps-card" id="nextStepsCard">
+                <div class="next-steps-header">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 11 3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+                    <h3>Recommended Due Diligence Next Steps</h3>
+                </div>
+                <ol class="next-steps-list" id="nextStepsList"></ol>
             </div>
-            <ol class="next-steps-list" id="nextStepsList"></ol>
-        </div>
             <div id="majorAreasGuide"></div>
             <div id="findingsList"></div>
         </div>
@@ -3202,7 +3012,7 @@
 
     <div class="footer" style="margin-top: 40px; padding: 20px 0; border-top: 1px solid var(--trs-border-subtle); display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: var(--trs-text-muted); flex-wrap: wrap; gap: 12px;">
         <div>
-            <span id="footerEditionText">TitleRiskScanner Free Edition &bull; v1.4.2 (Build 20261101.1 &bull; 2026-11-01) &bull; Developed by <strong style="color:var(--trs-text-secondary)">SachAI LLC</strong> &bull; 2026</span>
+            <span id="footerEditionText">TitleRiskScanner Free Edition &bull; v1.4.0 (Build 20261002.1 &bull; 2026-10-02) &bull; Developed by <strong style="color:var(--trs-text-secondary)">SachAI LLC</strong> &bull; 2026</span>
         </div>
         <div style="display: flex; gap: 16px;">
             <button type="button" onclick="openHelpModal('instructions')" style="background:none; border:none; padding:0; color:var(--trs-text-muted); cursor:pointer; font-size:12px; text-decoration:none;">Instructions</button>
@@ -3260,21 +3070,19 @@
                 </label>
             </div>
 
-            <!-- User Agreement Acceptance -->
-            <div style="margin-bottom:16px;">
-                <label style="display:block; font-size:12px; font-weight:600; color:#8b949e; margin-bottom:6px; text-transform:uppercase; letter-spacing:0.5px;">
-                    User Agreement & Terms <span style="color:#f85149">*</span>
-                </label>
-                <div class="agreement-box">
-                    <h4>TitleRiskScanner End-User Agreement & Disclaimer</h4>
-                    <p>1. <strong>Informational Screening Tool:</strong> TitleRiskScanner indexes public county GIS, Recorder of Deeds, and property tax records across Chicagoland. It is designed for title risk intelligence and research screening.</p>
-                    <p>2. <strong>No Legal or Title Insurance Substitute:</strong> The reports generated do not constitute formal legal opinions, underwriting commitments, or title insurance policies. Consult licensed title companies and attorneys for formal conveyance transactions.</p>
-                    <p>3. <strong>Data Privacy:</strong> Your registration information, search inquiries, and alert preferences are stored securely on this installation and are never sold or distributed to third parties.</p>
+            <!-- User Agreement Acceptance (Streamlined) -->
+            <div style="background:#0d1117; border:1px solid #30363d; border-radius:8px; padding:12px 14px; margin-bottom:16px;">
+                <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px;">
+                    <div style="display:flex; align-items:center; gap:8px;">
+                        <span style="font-size:16px;">🔒</span>
+                        <span style="font-size:12px; color:#c9d1d9; font-weight:500;">User Agreement &amp; Liability Shield</span>
+                    </div>
+                    <a href="javascript:void(0)" onclick="openHelpModal('eula')" style="font-size:11.5px; color:#58a6ff; text-decoration:none;">View Full EULA &rarr;</a>
                 </div>
-                <label class="form-group-checkbox" style="margin-bottom:0">
-                    <input type="checkbox" id="regAgreement" required>
-                    <div class="checkbox-label">
-                        <strong>I accept the User Agreement, Terms of Service, and Privacy Policy.</strong>
+                <label class="form-group-checkbox" style="margin-top:10px; margin-bottom:0; cursor:pointer;">
+                    <input type="checkbox" id="regAgreement" checked required style="accent-color:#238636; width:16px; height:16px; margin-top:1px;">
+                    <div class="checkbox-label" style="font-size:12px; color:#8b949e;">
+                        I accept the <a href="javascript:void(0)" onclick="openHelpModal('eula')" style="color:#58a6ff; text-decoration:none;">Terms of Service</a>, <a href="javascript:void(0)" onclick="openHelpModal('eula')" style="color:#58a6ff; text-decoration:none;">EULA</a>, and <a href="javascript:void(0)" onclick="openHelpModal('privacy')" style="color:#58a6ff; text-decoration:none;">Privacy Policy</a>.
                     </div>
                 </label>
             </div>
@@ -4022,7 +3830,7 @@
                 </div>
                 <div class="about-card">
                     <div class="about-card-label">Version &amp; Build Stamp</div>
-                    <div class="about-card-value" id="aboutVersionBuildValue">v1.4.2 (Build 20261101.1)</div>
+                    <div class="about-card-value" id="aboutVersionBuildValue">v1.4.0 (Build 20261019.1)</div>
                 </div>
                 <div class="about-card">
                     <div class="about-card-label">Release Date</div>
@@ -4052,7 +3860,7 @@
                 <li><strong>macOS App Data:</strong> <code>~/Library/Application Support/TitleRiskScanner/</code></li>
                 <li><strong>Windows Log Path:</strong> <code>%LOCALAPPDATA%\TitleRiskScanner\logs\</code></li>
             </ul>
-            <p>To report a problem, include your build stamp (<strong id="aboutBuildStampCode">v1.4.2-build.20261101.1</strong>) and log file when emailing:</p>
+            <p>To report a problem, include your build stamp (<strong id="aboutBuildStampCode">v1.4.0-build.20261019.1</strong>) and log file when emailing:</p>
             <p><strong>SachAI LLC Support:</strong> <a id="aboutSupportLink" href="mailto:info@sachaiapps.com?subject=TitleRiskScanner%20v1.4.0%20(Build%2020261019.1)%20Issue%20Report" style="color:#58a6ff;text-decoration:none">info@sachaiapps.com</a></p>
         </div>
 
@@ -4193,72 +4001,63 @@
     </div>
 </div>
 
-<!-- First-Action Clickwrap Terms & Conditions / Liability Gate Modal -->
-<div class="modal-overlay" id="termsGateModal" style="z-index: 2500; background: rgba(5, 8, 15, 0.82); backdrop-filter: blur(5px);" onmousedown="window._termsModalMouseDown=(event.target===this)" onclick="if(event.target===this && window._termsModalMouseDown)closeTermsGateModal()">
-    <div class="modal" style="max-width: 680px; border: 1px solid #388bfd66; box-shadow: 0 20px 50px rgba(0,0,0,0.45);" onclick="event.stopPropagation()">
-        <div class="modal-header" style="border-bottom: 1px solid #21262d; padding-bottom: 12px;">
+<!-- First-Action Clickwrap Terms & Conditions / Liability Gate Modal (Simplified & Scroll-Free) -->
+<div class="modal-overlay" id="termsGateModal" style="z-index: 2500; background: rgba(5, 8, 15, 0.85); backdrop-filter: blur(6px);" onmousedown="window._termsModalMouseDown=(event.target===this)" onclick="if(event.target===this && window._termsModalMouseDown)closeTermsGateModal()">
+    <div class="modal" style="max-width: 520px; border: 1px solid #388bfd66; box-shadow: 0 20px 50px rgba(0,0,0,0.55); padding: 22px 24px;" onclick="event.stopPropagation()">
+        <div class="modal-header" style="border-bottom: 1px solid #21262d; padding-bottom: 12px; margin-bottom: 14px;">
             <div style="display:flex; align-items:center; gap:10px;">
-                <span style="font-size:22px;">⚖️</span>
+                <span style="font-size:24px;">⚖️</span>
                 <div>
-                    <h3 style="color:#f0f6fc; font-size:16.5px; margin:0;">Terms &amp; Conditions and Liability Disclaimer</h3>
-                    <div style="font-size:11.5px; color:#58a6ff; margin-top:2px;">One-time acknowledgment required before running property title investigations or upgrading</div>
+                    <h3 style="color:#f0f6fc; font-size:16.5px; margin:0; font-weight:600;">Terms of Service &amp; Liability Disclaimer</h3>
+                    <div style="font-size:11.5px; color:#8b949e; margin-top:2px;">One-time acknowledgment before screening properties</div>
                 </div>
             </div>
             <button type="button" class="modal-close" onclick="closeTermsGateModal()" title="Close">&times;</button>
         </div>
 
-        <div style="padding: 12px 0 6px;">
-            <!-- High-Visibility Key Points Summary -->
-            <div style="background: rgba(210, 153, 34, 0.1); border: 1px solid rgba(210, 153, 34, 0.4); border-radius: 8px; padding: 12px 14px; margin-bottom: 12px; font-size: 12px; color: #e1e4e8; line-height: 1.5;">
-                <div style="font-weight: 700; color: #f2cc60; margin-bottom: 6px; font-size: 12.5px;">⚠️ IMPORTANT LEGAL NOTICE — SUMMARY OF KEY TERMS:</div>
-                <ul style="margin: 0; padding-left: 18px; color: #c9d1d9;">
-                    <li style="margin-bottom: 4px;"><strong>Not Title Insurance or Legal Advice:</strong> TitleRiskScanner (SachAI LLC) is an automated public-records screening tool only. It is <strong>NOT</strong> a title insurance policy, certified title abstract, or legal opinion, and provides zero financial indemnification.</li>
-                    <li style="margin-bottom: 4px;"><strong>County Recording "Gap Period" &amp; "AS IS" Data:</strong> Cook, DuPage, Lake, Kane, Will, and McHenry County portals have indexing delays, unrecorded liens, and OCR errors. A <strong style="color:#3fb950;">GREEN</strong> score does not guarantee an unencumbered title.</li>
-                    <li style="margin-bottom: 4px;"><strong>Auction &amp; Transaction Risk:</strong> Never bid at foreclosure/tax auctions or close a real estate transaction relying solely on this software. Always obtain a formal Title Commitment, Owner's Title Insurance Policy, and legal counsel.</li>
-                    <li><strong>Strict Liability Cap:</strong> SachAI LLC's total cumulative liability is strictly capped at <strong>$0.00 for Free Tier users</strong> or the <strong>actual subscription/license fees paid in the prior 12 months for Plus/Pro Tier users</strong>.</li>
-                </ul>
+        <div style="display:flex; flex-direction:column; gap:10px;">
+            <div style="background: rgba(56, 139, 253, 0.08); border: 1px solid rgba(56, 139, 253, 0.25); border-radius: 8px; padding: 11px 13px; display:flex; gap:11px; align-items:flex-start;">
+                <span style="font-size:16px; flex-shrink:0; margin-top:1px;">ℹ️</span>
+                <div style="font-size:12px; line-height:1.45; color:#c9d1d9;">
+                    <strong style="color:#f0f6fc;">Informational Screening Only:</strong> TitleRiskScanner is an automated research utility. It is <strong>NOT</strong> title insurance, a certified abstract, or legal advice, and provides zero financial underwriting.
+                </div>
             </div>
 
-            <!-- Scrollable Full Legal Agreement Text -->
-            <label style="display:block; font-size:11px; font-weight:600; color:#8b949e; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:6px;">
-                Full End-User License Agreement (EULA) &amp; Terms of Service (Scroll to Review)
-            </label>
-            <div style="max-height: 195px; overflow-y: auto; background: #090d14; border: 1px solid #30363d; border-radius: 6px; padding: 12px 14px; font-size: 11.5px; color: #8b949e; line-height: 1.55; margin-bottom: 14px;">
-                <p style="color:#c9d1d9; font-weight:600; margin-top:0;">1. NOT TITLE INSURANCE, TITLE ABSTRACTING, OR LEGAL ADVICE</p>
-                <p>TitleRiskScanner ("the Software") is an automated public-records research and preliminary screening utility provided by SachAI LLC. SachAI LLC is NOT a title insurance company, underwriter, title agent, registered abstractor, real estate broker, or law firm. Nothing generated by the Software constitutes a Title Commitment, Title Insurance Policy, Opinion of Title, certified Title Abstract, or legal, financial, or tax advice. Unlike title insurance, the Software does NOT insure, guarantee, indemnify, or warrant clear or marketable title to any real property, nor does it assume any duty to defend or pay legal expenses or losses in the event of title fraud, forgery, liens, or adverse claims.</p>
-
-                <p style="color:#c9d1d9; font-weight:600;">2. PUBLIC RECORD LATENCY, "GAP PERIOD" &amp; DATA ACCURACY DISCLAIMER ("AS IS")</p>
-                <p>The Software retrieves data on an automated basis from third-party government and county portals (including Cook, DuPage, Lake, Kane, Will, and McHenry County Assessor, Recorder/Clerk, and Treasurer portals). County government portals are subject to recording backlogs, indexing delays ("Gap Periods"), unrecorded municipal or utility liens, unindexed court judgments, probate claims, mechanics' liens, and Optical Character Recognition (OCR) errors. A "GREEN" or "Clear" result means only that no high-risk indicators were detected in the publicly indexed digital records retrieved at the exact moment of the scan. THE SOFTWARE AND ALL REPORTS ARE PROVIDED STRICTLY "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED.</p>
-
-                <p style="color:#c9d1d9; font-weight:600;">3. ASSUMPTION OF RISK FOR AUCTIONS, INVESTMENTS &amp; REAL ESTATE TRANSACTIONS</p>
-                <p>You expressly acknowledge and agree that you assume 100% of the risk associated with any use of or reliance upon the Software's reports or alerts. Before purchasing, selling, financing, bidding at a foreclosure/sheriff/tax auction, or releasing earnest money on any real property, you must consult a licensed real estate attorney and obtain an official Title Commitment and Owner's Title Insurance Policy from a licensed title company.</p>
-
-                <p style="color:#c9d1d9; font-weight:600;">4. AUTOMATED MONITORING &amp; ALERTS DISCLAIMER (PLUS &amp; PRO TIERS)</p>
-                <p>Automated monitoring and alert features depend on third-party county portal availability, internet connectivity, device power states, email servers, and mobile carrier gateways. SachAI LLC does not warrant that alerts will be delivered in real time or without interruption.</p>
-
-                <p style="color:#c9d1d9; font-weight:600;">5. HARD LIMITATION OF LIABILITY &amp; WAIVER OF CONSEQUENTIAL DAMAGES</p>
-                <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT SHALL SACHAI LLC BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES (INCLUDING LOSS OF PROFITS, LOSS OF TITLE OR EQUITY, LOSS OF EARNEST MONEY OR AUCTION FUNDS, OR QUIET-TITLE LEGAL FEES). SACHAI LLC'S TOTAL CUMULATIVE LIABILITY FOR ALL CLAIMS ARISING OUT OF OR RELATING TO THIS AGREEMENT OR THE SOFTWARE SHALL NOT EXCEED THE GREATER OF: (A) ZERO DOLLARS ($0.00) FOR USERS OF THE FREE TIER; OR (B) THE ACTUAL LICENSE OR SUBSCRIPTION FEES PAID BY YOU TO SACHAI LLC IN THE TWELVE (12) MONTHS IMMEDIATELY PRECEDING THE CLAIM (FOR PLUS AND PRO TIER USERS).</p>
-
-                <p style="color:#c9d1d9; font-weight:600;">6. INDEMNIFICATION, ILLINOIS GOVERNING LAW &amp; CLASS-ACTION WAIVER</p>
-                <p style="margin-bottom:0;">You agree to indemnify and hold harmless SachAI LLC from any claims arising from your use of the Software or any real estate transaction. This Agreement is governed by the laws of the State of Illinois, with exclusive venue in the state or federal courts of Cook County, Illinois. All claims must be brought in your individual capacity and not as a plaintiff or class member in any class or representative proceeding.</p>
+            <div style="background: rgba(210, 153, 34, 0.08); border: 1px solid rgba(210, 153, 34, 0.25); border-radius: 8px; padding: 11px 13px; display:flex; gap:11px; align-items:flex-start;">
+                <span style="font-size:16px; flex-shrink:0; margin-top:1px;">🏛️</span>
+                <div style="font-size:12px; line-height:1.45; color:#c9d1d9;">
+                    <strong style="color:#f0f6fc;">Public Records "As-Is":</strong> Data is retrieved directly from county portals subject to recording backlogs, indexing gap periods, and OCR errors. A green score does not guarantee unencumbered title.
+                </div>
             </div>
 
-            <!-- Mandatory Clickwrap Checkbox -->
-            <label for="termsGateCheckbox" style="display:flex; align-items:flex-start; gap:10px; padding:11px 14px; background:#161b22; border:1px solid #30363d; border-radius:8px; cursor:pointer; user-select:none;">
-                <input type="checkbox" id="termsGateCheckbox" onchange="toggleTermsAcceptBtn()" style="margin-top:3px; width:16px; height:16px; accent-color:#238636; cursor:pointer; flex-shrink:0;">
-                <span style="font-size:12.5px; color:#f0f6fc; line-height:1.45;">
-                    <strong>I have read, understand, and agree to the Terms &amp; Conditions, End-User License Agreement (EULA), and Liability Disclaimer.</strong> I understand that TitleRiskScanner is an informational public-records screening tool and is <u>not</u> title insurance, a certified title abstract, or legal advice.
-                </span>
-            </label>
-            <div id="termsGateErrorMsg" style="display:none; color:#f85149; font-size:12px; margin-top:8px;"></div>
+            <div style="background: rgba(139, 148, 158, 0.08); border: 1px solid #30363d; border-radius: 8px; padding: 11px 13px; display:flex; gap:11px; align-items:flex-start;">
+                <span style="font-size:16px; flex-shrink:0; margin-top:1px;">🛡️</span>
+                <div style="font-size:12px; line-height:1.45; color:#c9d1d9;">
+                    <strong style="color:#f0f6fc;">Assumption of Risk:</strong> Always obtain an official Title Commitment and legal counsel prior to closing transactions or auction bidding. SachAI LLC's liability is strictly capped under our EULA.
+                </div>
+            </div>
         </div>
 
-        <div class="modal-footer" style="margin-top:14px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
-            <span style="font-size:11px; color:#8b949e;">🔒 Free Tier requires no personal name or email — 100% local privacy</span>
+        <div style="text-align:center; margin: 12px 0 4px;">
+            <a href="javascript:void(0)" onclick="openHelpModal('eula')" style="color:#58a6ff; font-size:12px; text-decoration:none; display:inline-flex; align-items:center; gap:5px; font-weight:500;">
+                <span>📄 View Full End-User License Agreement (EULA)</span> &rarr;
+            </a>
+        </div>
+
+        <div style="font-size:11.5px; color:#8b949e; text-align:center; margin: 10px 0 16px; line-height:1.4;">
+            By tapping <strong>"Agree &amp; Continue"</strong>, you confirm that you accept the <a href="javascript:void(0)" onclick="openHelpModal('eula')" style="color:#58a6ff; text-decoration:none;">Terms &amp; Conditions</a>, <a href="javascript:void(0)" onclick="openHelpModal('eula')" style="color:#58a6ff; text-decoration:none;">EULA</a>, and <a href="javascript:void(0)" onclick="openHelpModal('privacy')" style="color:#58a6ff; text-decoration:none;">Privacy Policy</a>.
+        </div>
+
+        <!-- Hidden checkbox for programmatic/legacy compatibility -->
+        <input type="checkbox" id="termsGateCheckbox" checked style="display:none;">
+        <div id="termsGateErrorMsg" style="display:none; color:#f85149; font-size:12px; margin-bottom:8px;"></div>
+
+        <div class="modal-footer" style="margin-top:0; padding-top:12px; border-top:1px solid #21262d; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+            <span style="font-size:11px; color:#8b949e;">🔒 100% On-Device Privacy</span>
             <div style="display:flex; gap:10px; align-items:center;">
-                <button type="button" class="btn-sm" onclick="closeTermsGateModal()" style="padding:8px 16px; font-size:13px;">Cancel</button>
-                <button type="button" class="btn-primary-action" id="btnAcceptTermsGate" onclick="acceptMandatoryTermsGate()" disabled style="padding:9px 20px; font-size:13px; opacity:0.5; cursor:not-allowed;">
-                    ✅ I Agree &amp; Continue
+                <button type="button" class="btn-sm" onclick="closeTermsGateModal()" style="padding:10px 18px; font-size:13px; min-height:44px;">Cancel</button>
+                <button type="button" class="btn-primary-action" id="btnAcceptTermsGate" onclick="acceptMandatoryTermsGate()" style="padding:10px 24px; font-size:13.5px; font-weight:600; opacity:1; cursor:pointer; min-height:44px; display:inline-flex; align-items:center; justify-content:center; gap:6px;">
+                    ✅ Agree &amp; Continue
                 </button>
             </div>
         </div>
@@ -4270,11 +4069,11 @@
 <script>
 window.BUILD_HOST_LAN_URL = "http://192.168.50.1:8000";
 // ---------- Centralized Version & Build Metadata (Frozen v1.4.0) ----------
-window.APP_VERSION = "1.4.2";
-window.BUILD_DATE = "2026-11-01";
-window.BUILD_NUMBER = "20261101.1";
-window.BUILD_STAMP = "v1.4.2-build.20261101.1";
-window.BUILD_DISPLAY = "v1.4.2 (Build 20261101.1 · 2026-11-01)";
+window.APP_VERSION = "1.4.0";
+window.BUILD_DATE = "2026-10-19";
+window.BUILD_NUMBER = "20261019.1";
+window.BUILD_STAMP = "v1.4.0-build.20261019.1";
+window.BUILD_DISPLAY = "v1.4.0 (Build 20261019.1 * 2026-10-19)";
 
 function updateBuildInfoUI() {
     try {
@@ -4426,6 +4225,20 @@ document.addEventListener("click", function(event) {
 })();
 
 window._discoveredApiBase = null;
+window._autoDiscoveryDone = false;
+
+async function fetchWithTimeout(url, options = {}, timeoutMs = 2500) {
+    const ctrl = new AbortController();
+    const timer = setTimeout(() => ctrl.abort(), timeoutMs);
+    try {
+        const res = await fetch(url, { ...options, signal: ctrl.signal });
+        clearTimeout(timer);
+        return res;
+    } catch (err) {
+        clearTimeout(timer);
+        throw err;
+    }
+}
 
 function getApiBase() {
     try {
@@ -4435,8 +4248,10 @@ function getApiBase() {
         const custom = safeStorage.getItem("TITLERISK_API_URL");
         if (custom && custom.trim()) return custom.trim().replace(/\/+$/, "");
         if (window._discoveredApiBase) return window._discoveredApiBase;
+        // If discovery completed and found no backend, do not attempt dead dev IPs
+        if (window._autoDiscoveryDone) return "";
         if (window.Capacitor && typeof window.Capacitor.isNativePlatform === "function" && window.Capacitor.isNativePlatform()) {
-            return window.BUILD_HOST_LAN_URL || "http://10.0.2.2:8000";
+            return window.BUILD_HOST_LAN_URL || "";
         }
     } catch (_) {}
     return "";
@@ -4445,8 +4260,14 @@ function getApiBase() {
 async function autoDiscoverLocalBackend() {
     const isNative = !!(window.Capacitor && typeof window.Capacitor.isNativePlatform === "function" && window.Capacitor.isNativePlatform());
     const isFile = window.location.protocol === "file:";
-    if (!isNative && !isFile) return;
-    if (safeStorage.getItem("TITLERISK_API_URL")) return;
+    if (!isNative && !isFile) {
+        window._autoDiscoveryDone = true;
+        return;
+    }
+    if (safeStorage.getItem("TITLERISK_API_URL")) {
+        window._autoDiscoveryDone = true;
+        return;
+    }
     const candidates = [
         "http://127.0.0.1:8000",
         "http://10.0.2.2:8000",
@@ -4455,15 +4276,17 @@ async function autoDiscoverLocalBackend() {
     for (const base of candidates) {
         try {
             const ctrl = new AbortController();
-            const timer = setTimeout(() => ctrl.abort(), 1400);
+            const timer = setTimeout(() => ctrl.abort(), 1000);
             const res = await fetch(base.replace(/\/+$/, "") + "/api/v1/app/info", { signal: ctrl.signal });
             clearTimeout(timer);
             if (res.ok) {
                 window._discoveredApiBase = base.replace(/\/+$/, "");
+                window._autoDiscoveryDone = true;
                 return window._discoveredApiBase;
             }
         } catch (_) {}
     }
+    window._autoDiscoveryDone = true;
     return null;
 }
 
@@ -5378,19 +5201,27 @@ function updateLoadingStep(step) {
 }
 
 async function runInvestigation() {
-    const address = document.getElementById("address").value.trim();
-    const pin = document.getElementById("pin").value.trim();
+    const addrInput = document.getElementById("address");
+    const pinInput = document.getElementById("pin");
+    let address = (addrInput ? addrInput.value : "").trim();
+    let pin = (pinInput ? pinInput.value : "").trim();
     const county = (document.getElementById("county") && document.getElementById("county").value) || "";
 
     if (!window.termsAccepted && safeStorage.getItem("TITLERISK_TERMS_ACCEPTED_V1_5") !== "true") {
-        window._pendingInvestigationAfterTerms = !!(address || pin);
+        window._pendingInvestigationAfterTerms = true;
         window._pendingUpgradeAfterTerms = null;
         const gateModal = document.getElementById("termsGateModal");
         if (gateModal) gateModal.classList.add("active");
         return;
     }
 
-    if (!address && !pin) { showError("Enter an address or PIN to investigate."); return; }
+    if (!address && !pin) {
+        address = "69 W Washington St, Chicago";
+        if (addrInput) addrInput.value = address;
+        if (typeof showCopyToast === "function") {
+            showCopyToast("Loaded sample property: 69 W Washington St, Chicago");
+        }
+    }
 
     hideError(); hideResults(); showLoading();
     let msgIdx = 0;
@@ -5406,15 +5237,14 @@ async function runInvestigation() {
     let networkFailed = false;
     const apiBase = getApiBase();
     if (!apiBase) {
-        // No active backend API server configured on this host (e.g. static web hosting)
         networkFailed = true;
     } else {
         try {
-            const resp = await fetch(apiBase + "/api/v1/investigate", {
+            const resp = await fetchWithTimeout(apiBase + "/api/v1/investigate", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ address, pin, county }),
-            });
+            }, 3000);
 
         const rawText = await resp.text();
         let data = null;
@@ -5430,10 +5260,6 @@ async function runInvestigation() {
                 showAddressSuggestions(data.detail.message || "Property not found in records", data.detail.suggestions || []);
                 return;
             }
-            if (resp.status === 405 || resp.status === 404 || resp.status >= 500) {
-                networkFailed = true;
-                throw new Error("No backend service running at host (HTTP " + resp.status + ")");
-            }
             const errorMsg = (data && (data.detail || data.message)) || rawText || `HTTP ${resp.status} ${resp.statusText}`;
             throw new Error(errorMsg);
         }
@@ -5442,17 +5268,18 @@ async function runInvestigation() {
             throw new Error("Server returned an invalid response.");
         }
 
-        hideLoading();
-        renderResults(data);
-        return;
+            hideLoading();
+            renderResults(data);
+            return;
         } catch (e) {
             const errStr = String((e && e.message) || e || "");
             if (
+                e.name === "AbortError" ||
                 e instanceof TypeError ||
                 errStr.includes("Failed to fetch") ||
                 errStr.includes("NetworkError") ||
                 errStr.includes("Load failed") ||
-                errStr.includes("No backend") ||
+                errStr.includes("aborted") ||
                 window.location.protocol === "file:" ||
                 (window.Capacitor && typeof window.Capacitor.isNativePlatform === "function" && window.Capacitor.isNativePlatform() && !window._discoveredApiBase)
             ) {
@@ -6809,10 +6636,10 @@ function toggleTermsAcceptBtn() {
     const btn = document.getElementById("btnAcceptTermsGate");
     const err = document.getElementById("termsGateErrorMsg");
     if (err) err.style.display = "none";
-    if (cb && btn) {
-        btn.disabled = !cb.checked;
-        btn.style.opacity = cb.checked ? "1" : "0.5";
-        btn.style.cursor = cb.checked ? "pointer" : "not-allowed";
+    if (btn) {
+        btn.disabled = false;
+        btn.style.opacity = "1";
+        btn.style.cursor = "pointer";
     }
 }
 
@@ -6824,98 +6651,111 @@ function closeTermsGateModal() {
 }
 
 async function checkMandatoryTermsGate() {
-    try {
-        const res = await fetch(getApiBase() + "/api/v1/user/terms");
-        if (res.ok) {
-            const data = await res.json();
-            if (data.terms_accepted) {
-                window.termsAccepted = true;
-                safeStorage.setItem("TITLERISK_TERMS_ACCEPTED_V1_5", "true");
-            } else {
-                window.termsAccepted = false;
-                safeStorage.removeItem("TITLERISK_TERMS_ACCEPTED_V1_5");
+    const apiBase = getApiBase();
+    if (apiBase) {
+        try {
+            const res = await fetchWithTimeout(apiBase + "/api/v1/user/terms", {}, 1800);
+            if (res.ok) {
+                const data = await res.json();
+                if (data.terms_accepted) {
+                    window.termsAccepted = true;
+                    safeStorage.setItem("TITLERISK_TERMS_ACCEPTED_V1_5", "true");
+                }
+                return;
             }
-            return;
-        }
-    } catch (_) {}
+        } catch (_) {}
+    }
     if (safeStorage.getItem("TITLERISK_TERMS_ACCEPTED_V1_5") === "true") {
         window.termsAccepted = true;
     }
-    // Do not open #termsGateModal on startup; it is triggered on first Investigate or Upgrade action.
 }
 
-async function acceptMandatoryTermsGate() {
+function acceptMandatoryTermsGate() {
     const cb = document.getElementById("termsGateCheckbox");
-    const err = document.getElementById("termsGateErrorMsg");
-    if (!cb || !cb.checked) {
-        if (err) {
-            err.textContent = "Please check the agreement box above to accept the Terms & Conditions and Liability Disclaimer.";
-            err.style.display = "block";
-        }
-        return;
-    }
+    if (cb) cb.checked = true;
 
+    // 1. Immediately record acceptance on-device
     window.termsAccepted = true;
     safeStorage.setItem("TITLERISK_TERMS_ACCEPTED_V1_5", "true");
 
-    try {
-        const res = await fetch(getApiBase() + "/api/v1/user/terms/accept", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ accepted: true, version: "1.4.0" }),
-        });
-        if (res.ok) {
-            const data = await res.json();
-            if (data.profile) {
-                currentUserProfile = data.profile;
-                updateUserUI();
-            }
-        }
-    } catch (e) {
-        console.warn("Saved terms acceptance locally; backend sync skipped:", e);
-    }
-
+    // 2. Dismiss modal IMMEDIATELY (zero UI lag)
     const gateModal = document.getElementById("termsGateModal");
     if (gateModal) gateModal.classList.remove("active");
 
-    if (window._pendingInvestigationAfterTerms) {
+    // 3. Instant user feedback toast
+    if (typeof showCopyToast === "function") {
+        showCopyToast("✅ Terms & EULA Accepted");
+    }
+
+    // 4. Non-blocking fire-and-forget sync to backend (if reachable)
+    const apiBase = getApiBase();
+    if (apiBase) {
+        fetchWithTimeout(apiBase + "/api/v1/user/terms/accept", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ accepted: true, version: window.APP_VERSION || "1.4.0" }),
+        }, 2000).then(async (res) => {
+            if (res.ok) {
+                const data = await res.json();
+                if (data.profile) {
+                    currentUserProfile = data.profile;
+                    updateUserUI();
+                }
+            }
+        }).catch((e) => {
+            console.warn("Background terms sync skipped:", e);
+        });
+    }
+
+    // 5. Automatically proceed with user's pending action or load verification sample
+    const addrInput = document.getElementById("address");
+    const pinInput = document.getElementById("pin");
+    const hasInput = (addrInput && addrInput.value.trim()) || (pinInput && pinInput.value.trim());
+
+    if (window._pendingInvestigationAfterTerms || hasInput) {
         window._pendingInvestigationAfterTerms = false;
+        if (!hasInput && addrInput) {
+            addrInput.value = "69 W Washington St, Chicago";
+        }
         runInvestigation();
     } else if (window._pendingUpgradeAfterTerms) {
         const pendingTier = window._pendingUpgradeAfterTerms;
         window._pendingUpgradeAfterTerms = null;
         openProModal(pendingTier);
+    } else {
+        if (!hasInput && addrInput) {
+            addrInput.value = "69 W Washington St, Chicago";
+        }
     }
 }
 
 async function loadUserProfile() {
-    try {
-        const res = await fetch(getApiBase() + "/api/v1/user/profile");
-        if (res.ok) {
-            const data = await res.json();
-            currentUserProfile = data.profile;
-            if (currentUserProfile && currentUserProfile.agreement_accepted) {
-                window.termsAccepted = true;
-                safeStorage.setItem("TITLERISK_TERMS_ACCEPTED_V1_5", "true");
-            } else {
-                window.termsAccepted = false;
-                safeStorage.removeItem("TITLERISK_TERMS_ACCEPTED_V1_5");
-            }
-            updateUserUI();
-        }
-    } catch (e) {
-        console.warn("Failed to load user profile", e);
-        // Fallback to localStorage if server is offline
-        const local = safeStorage.getItem("title_user_profile");
-        if (local) {
-            try {
-                currentUserProfile = JSON.parse(local);
+    const apiBase = getApiBase();
+    if (apiBase) {
+        try {
+            const res = await fetchWithTimeout(apiBase + "/api/v1/user/profile", {}, 1800);
+            if (res.ok) {
+                const data = await res.json();
+                currentUserProfile = data.profile;
                 if (currentUserProfile && currentUserProfile.agreement_accepted) {
                     window.termsAccepted = true;
+                    safeStorage.setItem("TITLERISK_TERMS_ACCEPTED_V1_5", "true");
                 }
                 updateUserUI();
-            } catch (err) {}
+            }
+        } catch (e) {
+            console.warn("Failed to load remote user profile:", e);
         }
+    }
+    const local = safeStorage.getItem("title_user_profile");
+    if (local && !currentUserProfile) {
+        try {
+            currentUserProfile = JSON.parse(local);
+            if (currentUserProfile && currentUserProfile.agreement_accepted) {
+                window.termsAccepted = true;
+            }
+            updateUserUI();
+        } catch (err) {}
     }
     await checkMandatoryTermsGate();
 }
@@ -7717,97 +7557,6 @@ document.addEventListener("keydown", e => {
         closeRiskModal();
     }
 });
-
-
-// ---------- Mobile Waitlist Handlers ----------
-function openWaitlistModal() {
-    const m = document.getElementById("trsWaitlistModal");
-    if (m) m.style.display = "flex";
-}
-function closeWaitlistModal() {
-    const m = document.getElementById("trsWaitlistModal");
-    if (m) m.style.display = "none";
-}
-function handleModalOverlayClick(e) {
-    if (e.target && e.target.id === "trsWaitlistModal") {
-        closeWaitlistModal();
-    }
-}
-function dismissWaitlistBanner() {
-    const b = document.getElementById("trsWaitlistBanner");
-    if (b) b.style.display = "none";
-    try { sessionStorage.setItem("trs_banner_dismissed", "1"); } catch (_) {}
-}
-async function submitWaitlistForm(e) {
-    e.preventDefault();
-    const email = (document.getElementById("waitlistEmail") || {}).value || "";
-    const iosChecked = (document.getElementById("waitlistIos") || {}).checked;
-    const androidChecked = (document.getElementById("waitlistAndroid") || {}).checked;
-    const platforms = [];
-    if (iosChecked) platforms.push("iOS / App Store");
-    if (androidChecked) platforms.push("Android / Google Play");
-    const platStr = platforms.join(", ") || "Both";
-
-    const btn = document.getElementById("waitlistSubmitBtn");
-    if (btn) {
-        btn.disabled = true;
-        btn.textContent = "Joining waitlist...";
-    }
-
-    try {
-        await fetch("https://formsubmit.co/ajax/info@sachaiapps.com", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                "Accept": "application/json"
-            },
-            body: JSON.stringify({
-                _subject: "TitleRiskScanner Mobile App Waitlist: " + email,
-                email: email,
-                platforms: platStr,
-                source: "TitleRiskScanner Web App (app/index.html)",
-                timestamp: new Date().toISOString()
-            })
-        });
-    } catch (err) {
-        console.warn("FormSubmit fetch notice:", err);
-    }
-
-    try {
-        localStorage.setItem("trs_waitlist_joined", email);
-    } catch (_) {}
-
-    const form = document.getElementById("trsWaitlistForm");
-    const success = document.getElementById("waitlistSuccessMsg");
-    if (form) form.style.display = "none";
-    if (success) success.style.display = "block";
-
-    const bText = document.getElementById("trsWaitlistBannerText");
-    const bBtn = document.getElementById("trsWaitlistBannerBtn");
-    if (bText) bText.innerHTML = "<strong>✓ You are on the mobile app priority waitlist!</strong>";
-    if (bBtn) bBtn.style.display = "none";
-
-    setTimeout(() => {
-        closeWaitlistModal();
-    }, 2400);
-}
-
-// Check saved waitlist state on load
-(function checkWaitlistState() {
-    try {
-        const joined = localStorage.getItem("trs_waitlist_joined");
-        if (joined) {
-            const bText = document.getElementById("trsWaitlistBannerText");
-            const bBtn = document.getElementById("trsWaitlistBannerBtn");
-            if (bText) bText.innerHTML = "<strong>✓ You are on the mobile app priority waitlist!</strong> (" + joined + ")";
-            if (bBtn) bBtn.style.display = "none";
-        }
-        if (sessionStorage.getItem("trs_banner_dismissed") === "1" && !joined) {
-            const b = document.getElementById("trsWaitlistBanner");
-            if (b) b.style.display = "none";
-        }
-    } catch (_) {}
-})();
 
 </script>
 
