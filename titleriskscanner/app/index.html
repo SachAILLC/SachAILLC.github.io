@@ -2693,13 +2693,11 @@
         </div>
     </div>
     <div class="header-right">
-        <!-- 24/7 Monitoring & Portfolio Header Button -->
-        <button class="btn-header" id="btnHeaderMonitor" style="background:#238636; border-color:#2ea043; color:#fff;" onclick="openProModal()" title="24/7 Monitoring &amp; Portfolio">
-            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-            <span id="btnHeaderMonitorText">24/7 Monitoring &amp; Portfolio</span>
+        <!-- Real Estate Portfolio Header Button -->
+        <button class="btn-header" id="btnHeaderMonitor" style="background:#238636; border-color:#2ea043; color:#fff;" onclick="scrollToPortfolio()" title="View Saved Real Estate Portfolio">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+            <span id="btnHeaderMonitorText">Real Estate Portfolio</span>
         </button>
-        <button class="btn-header" id="btnHeaderPlus" style="display:none;" onclick="openProModal('plus')"></button>
-        <button class="btn-header" id="btnHeaderPro" style="display:none;" onclick="openProModal('pro')"></button>
 
         <!-- Theme Toggle Button -->
         <button class="btn-header" id="themeToggleBtn" onclick="toggleTheme()" title="Switch theme" aria-label="Toggle dark or light theme">
@@ -2960,13 +2958,6 @@
             </div>
             <button class="btn-clear" id="btnClearPortfolio" onclick="handleClearPortfolioClick(this)" title="Clear all recent property history">Clear All</button>
         </div>
-        <div id="portfolioLimitBanner" style="display:none; margin-bottom:12px; padding:10px 14px; background:rgba(210, 153, 34, 0.12); border:1px solid rgba(210, 153, 34, 0.45); border-radius:8px; font-size:12.5px; color:#f2cc60; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;">
-            <div>
-                <strong>⚠️ Plus Tier Portfolio Limit Reached (5 / 5 Properties):</strong>
-                <span style="color:#c9d1d9">Remove a saved property below to add a new one, or upgrade to <strong>Pro Tier</strong> for unlimited properties.</span>
-            </div>
-            <button type="button" class="btn-sm" style="background:#238636; color:#fff; border-color:#238636; white-space:nowrap;" onclick="openProModal()">🚀 Upgrade to Pro (Unlimited)</button>
-        </div>
         <div class="portfolio-table-wrap">
             <table class="portfolio-table">
                 <thead>
@@ -2984,29 +2975,6 @@
                 </thead>
                 <tbody id="portfolioBody"></tbody>
             </table>
-        </div>
-    </div>
-
-    <!-- Free Edition Portfolio Locked Teaser Banner -->
-    <div id="freePortfolioBanner" class="pro-upgrade-banner" style="display:none; margin-top:40px;">
-        <div>
-            <div style="display:flex; align-items:center; gap:8px;">
-                <span class="pro-badge">PLUS &amp; PRO FEATURE</span>
-                <strong style="color:var(--trs-text-primary); font-size:14px;">Real Estate Portfolio Watchlists &amp; 24/7 Alerts</strong>
-            </div>
-            <div style="font-size:12.5px; color:var(--trs-text-muted); margin-top:4px;">
-                Save up to 5 properties in <strong>Plus ($99/yr or $10/mo)</strong> or unlimited properties in <strong>Pro ($149/yr)</strong> with automated lien &amp; tax monitoring.
-            </div>
-        </div>
-        <div style="display:flex; gap:10px; flex-wrap:wrap;">
-            <button type="button" class="btn-pro-action" style="background:var(--trs-accent-blue); border-color:var(--trs-accent-blue); display:inline-flex; align-items:center; gap:6px;" onclick="openProModal('plus')">
-                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                <span>Upgrade to Plus (5 PINs)</span>
-            </button>
-            <button type="button" class="btn-pro-action" style="background:var(--trs-primary-green); border-color:var(--trs-primary-green-hover); display:inline-flex; align-items:center; gap:6px;" onclick="openProModal('pro')">
-                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path></svg>
-                <span>Upgrade to Pro (Unlimited)</span>
-            </button>
         </div>
     </div>
 
@@ -3030,7 +2998,7 @@
         <div class="modal-header">
             <h3 id="userModalTitle" style="display:flex; align-items:center; gap:8px;">
                 <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                <span>User Registration &amp; Profile</span>
+                <span>Register for Free Updates &amp; Alerts</span>
             </h3>
             <button type="button" class="modal-close" onclick="closeUserModal()">&times;</button>
         </div>
@@ -3045,14 +3013,14 @@
                 <input type="email" id="regEmail" placeholder="e.g. jane.doe@example.com" required onkeydown="handleInputEnter(event, 'regPhone')">
             </div>
             <div class="form-group">
-                <label>Phone Number (Optional for SMS Alerts)</label>
+                <label>Phone Number (Optional)</label>
                 <input type="tel" id="regPhone" placeholder="e.g. (312) 555-0199" onkeydown="handleInputEnter(event, 'regAgreement')">
             </div>
 
             <!-- Installation Alert Options (Pro Edition) -->
             <div id="regAlertOptionsBox" style="background:#0d1117; border:1px solid #30363d; border-radius:8px; padding:14px; margin-bottom:18px;">
                 <label style="display:block; font-size:12px; font-weight:600; color:#58a6ff; margin-bottom:8px; text-transform:uppercase; letter-spacing:0.5px;">
-                    Installation Options &mdash; Alert Delivery Channels
+                    Alert &amp; Update Delivery Channels
                 </label>
                 <label class="form-group-checkbox">
                     <input type="checkbox" id="regAlertEmail" checked>
@@ -3089,7 +3057,7 @@
 
             <div class="modal-footer">
                 <button type="button" class="btn-sm" onclick="closeUserModal()">Cancel</button>
-                <button type="submit" class="btn-primary-action" id="btnSaveReg">Save & Register</button>
+                <button type="submit" class="btn-primary-action" id="btnSaveReg">Register for Free Updates</button>
             </div>
         </form>
     </div>
@@ -3123,18 +3091,6 @@
 
         <!-- Alert & Notification Settings Panel -->
         <div class="settings-panel active" id="settings-panel-alerts">
-            <!-- Free Edition Locked Teaser Card -->
-            <div id="freeAlertsLockCard" style="display:none; text-align:center; padding:36px 20px; background:#0d1117; border:1px solid #30363d; border-radius:10px; margin-bottom:16px;">
-                <div style="font-size:38px; margin-bottom:12px;">🔔🔒</div>
-                <h3 style="color:#f0f6fc; font-size:16px; margin-bottom:8px;">24/7 Title &amp; Tax Monitoring Alerts is a Plus / Pro Feature</h3>
-                <p style="color:#8b949e; font-size:13px; max-width:460px; margin:0 auto 20px; line-height:1.5;">
-                    Continuous background scanning for newly recorded deeds, mortgages, mechanics liens, and property tax deadlines is available in <strong>Plus Tier</strong> (up to 5 properties) and <strong>Pro Tier</strong> (unlimited properties).
-                </p>
-                <div style="display:flex; justify-content:center; gap:10px; flex-wrap:wrap;">
-                    <button type="button" class="btn-pro-action" style="font-size:13px; padding:9px 18px; background:#1f6feb; border-color:#388bfd;" onclick="openProModal('plus')">⭐ Upgrade to Plus ($99/yr)</button>
-                    <button type="button" class="btn-pro-action" style="font-size:13px; padding:9px 18px; background:#238636; border-color:#2ea043;" onclick="openProModal('pro')">🚀 Upgrade to Pro ($149/yr)</button>
-                </div>
-            </div>
 
             <!-- Plus & Pro Edition Active Alert Controls Container -->
             <div id="proAlertsContainer">
@@ -3385,213 +3341,6 @@
     </div>
 </div>
 
-<!-- 3-Tier Plans & Upgrade Modal -->
-<div class="modal-overlay" id="proModal" onmousedown="window._proModalMouseDown=(event.target===this)" onclick="if(event.target===this && window._proModalMouseDown)closeProModal()">
-    <div class="modal" style="max-width: 860px;" onclick="event.stopPropagation()">
-        <div class="modal-header">
-            <div style="display:flex; align-items:center; gap:12px;">
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="var(--trs-brand)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 3 7v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V7z"></path><path d="m9 12 2 2 4-4"></path></svg>
-                <div>
-                    <h3 style="color:var(--trs-text-primary); font-size:17px; margin:0;">TitleRiskScanner Plans — Free, Plus &amp; Pro Tiers</h3>
-                    <div style="font-size:11.5px; color:var(--trs-accent-blue); margin-top:2px;">Real-Time Title, Mortgage, Lien &amp; Tax Intelligence across Cook, DuPage, Lake, Will, Kane &amp; McHenry Counties</div>
-                </div>
-            </div>
-            <button type="button" class="modal-close" onclick="closeProModal()">&times;</button>
-        </div>
-        
-        <div style="padding: 10px 0;">
-            <!-- 3-Question Guided Plan Selector -->
-            <div class="plan-quiz-wrap" id="planQuizWrap">
-                <div class="plan-quiz-header">
-                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
-                    <span>Find the Right Monitoring Plan (3 Quick Questions)</span>
-                </div>
-                
-                <div class="plan-quiz-grid">
-                    <!-- Q1: Role -->
-                    <div class="plan-quiz-col">
-                        <label class="plan-quiz-label">1. Primary Real Estate Role</label>
-                        <div class="plan-quiz-options">
-                            <button type="button" class="plan-quiz-btn active" data-q="role" data-val="homeowner" onclick="setQuizAnswer('role', 'homeowner', this)">
-                                <span class="btn-title">Homeowner / Buyer</span>
-                                <span class="btn-sub">Primary residence or personal property</span>
-                            </button>
-                            <button type="button" class="plan-quiz-btn" data-q="role" data-val="investor" onclick="setQuizAnswer('role', 'investor', this)">
-                                <span class="btn-title">Landlord / Investor</span>
-                                <span class="btn-sub">Rental portfolio or acquisitions</span>
-                            </button>
-                            <button type="button" class="plan-quiz-btn" data-q="role" data-val="pro" onclick="setQuizAnswer('role', 'pro', this)">
-                                <span class="btn-title">Realtor / Attorney / Closer</span>
-                                <span class="btn-sub">Client deals &amp; transaction watchlists</span>
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Q2: Quantity -->
-                    <div class="plan-quiz-col">
-                        <label class="plan-quiz-label">2. Parcels to Track or Screen</label>
-                        <div class="plan-quiz-options">
-                            <button type="button" class="plan-quiz-btn active" data-q="props" data-val="1" onclick="setQuizAnswer('props', '1', this)">
-                                <span class="btn-title">1 Property</span>
-                                <span class="btn-sub">Single parcel / occasional checks</span>
-                            </button>
-                            <button type="button" class="plan-quiz-btn" data-q="props" data-val="5" onclick="setQuizAnswer('props', '5', this)">
-                                <span class="btn-title">2 to 5 Properties</span>
-                                <span class="btn-sub">Home plus rental / family parcels</span>
-                            </button>
-                            <button type="button" class="plan-quiz-btn" data-q="props" data-val="unlimited" onclick="setQuizAnswer('props', 'unlimited', this)">
-                                <span class="btn-title">6+ or Unlimited</span>
-                                <span class="btn-sub">Active pipeline &amp; deal flow</span>
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Q3: Speed -->
-                    <div class="plan-quiz-col">
-                        <label class="plan-quiz-label">3. Alert Speed &amp; Frequency</label>
-                        <div class="plan-quiz-options">
-                            <button type="button" class="plan-quiz-btn active" data-q="alerts" data-val="realtime" onclick="setQuizAnswer('alerts', 'realtime', this)">
-                                <span class="btn-title">24/7 Automated Alerts</span>
-                                <span class="btn-sub">Real-time SMS &amp; Email notices</span>
-                            </button>
-                            <button type="button" class="plan-quiz-btn" data-q="alerts" data-val="manual" onclick="setQuizAnswer('alerts', 'manual', this)">
-                                <span class="btn-title">Manual Searches Only</span>
-                                <span class="btn-sub">Point-in-time checks on demand</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Recommendation Output -->
-                <div class="quiz-recommendation-bar" id="quizRecommendationBar">
-                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                    <div id="quizRecText">
-                        <strong>Recommended: Plus Tier ($99/yr)</strong> — Automated 24/7 deed, lien, and tax monitoring for up to 5 properties.
-                    </div>
-                </div>
-            </div>
-
-            <!-- 3-Tier Pricing Grid -->
-            <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:14px; margin-bottom:18px;">
-                <!-- Tier 1: Free -->
-                <div id="tierCardFree" style="background:#0d1117; border:1px solid #30363d; border-radius:10px; padding:16px; display:flex; flex-direction:column; justify-content:space-between;">
-                    <div>
-                        <div style="font-size:11px; font-weight:700; color:#8b949e; text-transform:uppercase; letter-spacing:0.5px;">Tier 1 &bull; Free Tier</div>
-                        <div style="font-size:15px; font-weight:700; color:#f0f6fc; margin:4px 0 2px;">Single Property Check</div>
-                        <div style="font-size:11.5px; color:#8b949e; margin-bottom:12px;">Point-in-time screening</div>
-                        <div style="padding-bottom:12px; margin-bottom:12px; border-bottom:1px solid #21262d;">
-                            <span style="font-size:24px; font-weight:800; color:#f0f6fc;">$0</span>
-                            <span style="font-size:12px; color:#8b949e;"> / forever</span>
-                        </div>
-                        <ul style="list-style:none; padding:0; margin:0 0 14px 0; font-size:12px; color:#c9d1d9; line-height:1.5;">
-                            <li style="margin-bottom:6px;">✓ Single property point-in-time check</li>
-                            <li style="margin-bottom:6px;">✓ Chain of title &amp; mortgage release matching</li>
-                            <li style="margin-bottom:6px;">✓ Lien &amp; Lis Pendens screening</li>
-                            <li style="margin-bottom:6px;">✓ County Treasurer tax installment check</li>
-                            <li style="margin-bottom:6px; color:#6e7681;">— No saved portfolio watchlist</li>
-                            <li style="color:#6e7681;">— No 24/7 background SMS/Email alerts</li>
-                        </ul>
-                    </div>
-                    <button type="button" id="btnSelectTierFree" class="btn-sm" style="width:100%; padding:8px;" onclick="switchAppTier('free')">Current Tier</button>
-                </div>
-
-                <!-- Tier 2: Plus (Homeowner & Landlord) -->
-                <div id="tierCardPlus" style="background:linear-gradient(180deg, #161f2e 0%, #0d1117 100%); border:2px solid #58a6ff; border-radius:10px; padding:16px; display:flex; flex-direction:column; justify-content:space-between; position:relative;">
-                    <span style="position:absolute; top:-10px; right:12px; background:#58a6ff; color:#090d16; font-size:10px; font-weight:800; padding:2px 8px; border-radius:10px; text-transform:uppercase;">Homeowners &amp; Landlords</span>
-                    <div>
-                        <div style="font-size:11px; font-weight:700; color:#58a6ff; text-transform:uppercase; letter-spacing:0.5px;">Tier 2 &bull; Plus Tier</div>
-                        <div style="font-size:15px; font-weight:700; color:#f0f6fc; margin:4px 0 2px;">Up to 5 Properties</div>
-                        <div style="font-size:11.5px; color:#8b949e; margin-bottom:12px;">Home + Rental &amp; Other Properties</div>
-                        <div style="padding-bottom:12px; margin-bottom:12px; border-bottom:1px solid #21262d;">
-                            <div>
-                                <span style="font-size:24px; font-weight:800; color:#f0f6fc;">$99</span>
-                                <span style="font-size:12px; color:#8b949e;"> / year</span>
-                            </div>
-                            <div style="font-size:11.5px; color:#3fb950; font-weight:600; margin-top:2px;">or $10 / month (~$1.65/mo per property)</div>
-                        </div>
-                        <ul style="list-style:none; padding:0; margin:0 0 14px 0; font-size:12px; color:#c9d1d9; line-height:1.5;">
-                            <li style="margin-bottom:6px;">✓ <strong>Monitor up to 5 Properties (PINs)</strong></li>
-                            <li style="margin-bottom:6px;">✓ <strong>24/7 Automated Deed &amp; Lien Alerts</strong></li>
-                            <li style="margin-bottom:6px;">✓ <strong>Tax Installment &amp; Delinquency Alerts</strong></li>
-                            <li style="margin-bottom:6px;">✓ Email, SMS &amp; Desktop notifications</li>
-                            <li style="margin-bottom:6px;">✓ Saved local portfolio &amp; full history</li>
-                        </ul>
-                    </div>
-                    <button type="button" id="btnSelectTierPlus" class="btn-primary-action" style="width:100%; padding:8px; background:#1f6feb; border-color:#388bfd;" onclick="switchAppTier('plus')">Activate Plus Tier (5 PINs)</button>
-                </div>
-
-                <!-- Tier 3: Pro (Realtors / Attorneys / Investors) -->
-                <div id="tierCardPro" style="background:linear-gradient(180deg, #14221a 0%, #0d1117 100%); border:2px solid #3fb950; border-radius:10px; padding:16px; display:flex; flex-direction:column; justify-content:space-between; position:relative;">
-                    <span style="position:absolute; top:-10px; right:12px; background:#3fb950; color:#090d16; font-size:10px; font-weight:800; padding:2px 8px; border-radius:10px; text-transform:uppercase;">Unlimited B2B</span>
-                    <div>
-                        <div style="font-size:11px; font-weight:700; color:#3fb950; text-transform:uppercase; letter-spacing:0.5px;">Tier 3 &bull; Pro Tier</div>
-                        <div style="font-size:15px; font-weight:700; color:#f0f6fc; margin:4px 0 2px;">Realtors, Attorneys &amp; Investors</div>
-                        <div style="font-size:11.5px; color:#8b949e; margin-bottom:12px;">Unlimited Deal &amp; Client Portfolios</div>
-                        <div style="padding-bottom:12px; margin-bottom:12px; border-bottom:1px solid #21262d;">
-                            <div>
-                                <span style="font-size:24px; font-weight:800; color:#f0f6fc;">$149</span>
-                                <span style="font-size:12px; color:#8b949e;"> / year</span>
-                                <span style="font-size:11.5px; color:#8b949e;"> (or $19/mo)</span>
-                            </div>
-                            <div style="margin-top:6px; padding:5px 8px; background:rgba(210, 153, 34, 0.14); border:1px solid rgba(210, 153, 34, 0.45); border-radius:6px; font-size:11px; color:#f2cc60;">
-                                <strong>Special Offer: $99 One-Time</strong> Windows Founders License
-                            </div>
-                        </div>
-                        <ul style="list-style:none; padding:0; margin:0 0 14px 0; font-size:12px; color:#c9d1d9; line-height:1.5;">
-                            <li style="margin-bottom:6px;">✓ <strong>Unlimited Property Watchlists</strong></li>
-                            <li style="margin-bottom:6px;">✓ Pre-closing &amp; auction due diligence</li>
-                            <li style="margin-bottom:6px;">✓ 24/7 Lien, Lis Pendens &amp; Tax Alerts</li>
-                            <li style="margin-bottom:6px;">✓ 100% Private Zero-Cloud Local SQLite DB</li>
-                            <li style="margin-bottom:6px;">✓ Client &amp; Lender Risk Report Sharing</li>
-                        </ul>
-                    </div>
-                    <button type="button" id="btnSelectTierPro" class="btn-primary-action" style="width:100%; padding:8px; background:#238636; border-color:#2ea043;" onclick="switchAppTier('pro')">Activate Pro Tier (Unlimited)</button>
-                </div>
-            </div>
-
-            <!-- Multi-Device Promo Code & Email License Activation Box -->
-            <div id="licenseActivationCard" style="background:#0d1117; border:1px solid #3fb95066; border-radius:8px; padding:14px 16px; margin-bottom:14px;">
-                <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
-                    <div>
-                        <div style="font-size:13px; font-weight:700; color:#3fb950;">Have a Promo Code or License Key? Activate Here</div>
-                        <div style="font-size:11.5px; color:#8b949e;">Enter your Promo Code (or Email + License Key) to unlock Plus or Pro across your Phone, Tablet, Laptop &amp; Desktop.</div>
-                    </div>
-                    <div style="display:flex; align-items:center; gap:6px; background:#161b22; border:1px solid #30363d; border-radius:6px; padding:5px 10px;">
-                        <span style="font-size:11.5px; font-weight:600; color:#58a6ff;">Multi-Device Access Included</span>
-                    </div>
-                </div>
-                <div id="activeLicenseBanner" style="display:none; background:#12261e; border:1px solid #238636; border-radius:6px; padding:8px 12px; margin-bottom:10px; font-size:12px; color:#7ee787;"></div>
-                <form id="licenseActivateForm" onsubmit="event.preventDefault(); activateLicenseCode();" style="display:flex; gap:8px; flex-wrap:wrap;">
-                    <input type="email" id="licenseEmailInput" placeholder="Your Email (for email-registered keys)" style="flex:1; min-width:200px; padding:8px 12px; background:#161b22; border:1px solid #30363d; border-radius:6px; color:#f0f6fc; font-size:13px;">
-                    <input type="text" id="licenseCodeInput" placeholder="Enter Promo Code or License Key (TRS-PRO-...)" required style="flex:1.4; min-width:240px; padding:8px 12px; background:#161b22; border:1px solid #30363d; border-radius:6px; color:#f0f6fc; font-family:monospace; font-size:13px; text-transform:uppercase;">
-                    <button type="submit" class="btn-primary-action" id="btnActivateCode" style="padding:8px 18px; font-size:13px; background:#238636; border-color:#2ea043;">Activate Tier</button>
-                </form>
-                <div id="licenseActivateMsg" style="display:none; font-size:12px; margin-top:8px;"></div>
-            </div>
-
-            <!-- Automated Upgrade / Activation Key Request Form -->
-            <div style="background: linear-gradient(135deg, #161b22 0%, #1f293d 100%); border:1px solid #388bfd55; border-radius:8px; padding:14px 16px;">
-                <div style="font-size:13px; font-weight:600; color:#58a6ff; margin-bottom:4px;">🚀 Request a Multi-Device Plus ($99/yr) or Pro ($149/yr) Activation Key</div>
-                <div style="font-size:12px; color:#8b949e; margin-bottom:10px;">Select your desired tier and enter your email below. Your request will be sent automatically and we will email your multi-device key (Phone, Tablet, Mac &amp; Windows PC).</div>
-                <form id="proWaitlistForm" onsubmit="event.preventDefault(); submitProWaitlist();" style="display:flex; gap:8px; flex-wrap:wrap;">
-                    <select id="proWaitlistTier" style="padding:8px 10px; background:#0d1117; border:1px solid #30363d; border-radius:6px; color:#e1e4e8; font-size:13px;">
-                        <option value="pro">Pro Tier ($149/yr — Unlimited Properties)</option>
-                        <option value="plus">Plus Tier ($99/yr — Up to 5 Properties)</option>
-                        <option value="founders_pro">Founders Pro ($99 Lifetime)</option>
-                    </select>
-                    <input type="email" id="proWaitlistEmail" placeholder="Enter your email address" required style="flex:1; min-width:210px; padding:8px 12px; background:#0d1117; border:1px solid #30363d; border-radius:6px; color:#e1e4e8; font-size:13px;">
-                    <button type="submit" class="btn-primary-action" id="btnProWaitlist" style="padding:8px 18px; font-size:13px;">Request Activation Key &rarr;</button>
-                </form>
-                <div id="proWaitlistMsg" style="display:none; font-size:12.5px; color:#3fb950; margin-top:10px; padding:10px 12px; background:rgba(63,185,80,0.1); border:1px solid rgba(63,185,80,0.35); border-radius:6px;"></div>
-            </div>
-        </div>
-
-        <div class="modal-footer" style="margin-top:12px;">
-            <button type="button" class="btn-sm" onclick="closeProModal()">Close</button>
-        </div>
-    </div>
-</div>
-
 <!-- Detail Modal -->
 <div class="modal-overlay" id="detailModal" onmousedown="window._detailModalMouseDown=(event.target===this)" onclick="if(event.target===this && window._detailModalMouseDown)closeDetailModal()">
     <div class="modal" onclick="event.stopPropagation()">
@@ -3826,15 +3575,15 @@
                 </div>
                 <div class="about-card">
                     <div class="about-card-label">Active Edition</div>
-                    <div class="about-card-value" id="aboutEditionValue" style="color:#58a6ff;font-weight:600">Free Edition</div>
+                    <div class="about-card-value" id="aboutEditionValue" style="color:#58a6ff;font-weight:600">Standard Edition</div>
                 </div>
                 <div class="about-card">
                     <div class="about-card-label">Version &amp; Build Stamp</div>
-                    <div class="about-card-value" id="aboutVersionBuildValue">v1.4.0 (Build 20261104.1)</div>
+                    <div class="about-card-value" id="aboutVersionBuildValue">v1.4.0 (Build 20261105.1)</div>
                 </div>
                 <div class="about-card">
                     <div class="about-card-label">Release Date</div>
-                    <div class="about-card-value" id="aboutReleaseDateValue">2026-11-04</div>
+                    <div class="about-card-value" id="aboutReleaseDateValue">2026-11-05</div>
                 </div>
                 <div class="about-card">
                     <div class="about-card-label">Developer</div>
@@ -4070,10 +3819,17 @@
 window.BUILD_HOST_LAN_URL = "";
 // ---------- Centralized Version & Build Metadata (Frozen v1.4.0) ----------
 window.APP_VERSION = "1.4.0";
-window.BUILD_DATE = "2026-11-04";
-window.BUILD_NUMBER = "20261104.1";
-window.BUILD_STAMP = "v1.4.0-build.20261104.1";
-window.BUILD_DISPLAY = "v1.4.0 (Build 20261104.1 • 2026-11-04)";
+window.BUILD_DATE = "2026-11-05";
+window.BUILD_NUMBER = "20261105.1";
+window.BUILD_STAMP = "v1.4.0-build.20261105.1";
+window.BUILD_DISPLAY = "v1.4.0 (Build 20261105.1 • 2026-11-05)";
+
+function scrollToPortfolio() {
+    const wrap = document.getElementById("proPortfolioWrap");
+    if (wrap) {
+        wrap.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+}
 
 function updateBuildInfoUI() {
     try {
@@ -4473,146 +4229,69 @@ window.appEdition = "free";
 window.appMaxProperties = 0;
 
 function applyEditionUI(edition) {
-    let normalized = (edition || "free").toLowerCase();
-    if (!["free", "plus", "pro"].includes(normalized)) normalized = "free";
+    let normalized = (edition || "standard").toLowerCase();
     window.appEdition = normalized;
+    window.appMaxProperties = null;
 
-    const isPro = normalized === "pro";
-    const isPlus = normalized === "plus";
-    const hasPaidFeatures = isPro || isPlus;
-    window.appMaxProperties = isPro ? null : (isPlus ? 5 : 0);
-
-    // Header badge & buttons
+    // Header badge
     const badge = document.getElementById("appVersionBadge");
-    const btnHeaderPlus = document.getElementById("btnHeaderPlus");
-    const btnHeaderPro = document.getElementById("btnHeaderPro");
     const ver = `v${window.APP_VERSION || "1.4.0"}`;
     const buildTag = window.BUILD_NUMBER ? ` • B${window.BUILD_NUMBER}` : "";
     if (badge) {
-        if (isPro) {
-            badge.textContent = `${ver}${buildTag} • PRO`;
-            badge.style.background = "#1f293d";
-            badge.style.color = "#58a6ff";
-            badge.style.borderColor = "#388bfd33";
-            badge.title = `TitleRiskScanner ${ver} (Build ${window.BUILD_NUMBER || ""})`;
-        } else if (isPlus) {
-            badge.textContent = `${ver}${buildTag} • PLUS (5 PINs)`;
-            badge.style.background = "#162b1e";
-            badge.style.color = "#3fb950";
-            badge.style.borderColor = "#238636";
-            badge.title = `TitleRiskScanner ${ver} (Build ${window.BUILD_NUMBER || ""})`;
-        } else {
-            badge.textContent = `${ver}${buildTag} • FREE`;
-            badge.style.background = "#21262d";
-            badge.style.color = "#8b949e";
-            badge.style.borderColor = "#30363d";
-            badge.title = `TitleRiskScanner ${ver} (Build ${window.BUILD_NUMBER || ""})`;
-        }
+        badge.textContent = `${ver}${buildTag}`;
+        badge.style.background = "#1f293d";
+        badge.style.color = "#58a6ff";
+        badge.style.borderColor = "#388bfd33";
+        badge.title = `TitleRiskScanner ${ver} (Build ${window.BUILD_NUMBER || ""})`;
     }
+
     // About Modal - Active Edition Info
     const aboutEdition = document.getElementById("aboutEditionValue");
     if (aboutEdition) {
-        if (isPro) {
-            aboutEdition.textContent = "Pro Edition (Unlimited Properties)";
-            aboutEdition.style.color = "#58a6ff";
-        } else if (isPlus) {
-            aboutEdition.textContent = "Plus Edition (Up to 5 Properties)";
-            aboutEdition.style.color = "#3fb950";
-        } else {
-            aboutEdition.textContent = "Free Edition";
-            aboutEdition.style.color = "#8b949e";
-        }
+        aboutEdition.textContent = "Standard Edition (Full Local Portfolio & Monitoring)";
+        aboutEdition.style.color = "#58a6ff";
     }
 
+    // Real Estate Portfolio Header Button
     const btnMonitor = document.getElementById("btnHeaderMonitor");
     const btnMonitorText = document.getElementById("btnHeaderMonitorText");
     if (btnMonitor && btnMonitorText) {
-        btnMonitorText.textContent = "24/7 Monitoring & Portfolio";
-        if (isPro) {
-            btnMonitor.title = "24/7 Monitoring & Portfolio (Pro Tier Active — Unlimited Watchlists)";
-            btnMonitor.style.background = "#238636";
-            btnMonitor.style.borderColor = "#2ea043";
-        } else if (isPlus) {
-            btnMonitor.title = "24/7 Monitoring & Portfolio (Plus Tier Active — Up to 5 PINs)";
-            btnMonitor.style.background = "#1f6feb";
-            btnMonitor.style.borderColor = "#388bfd";
-        } else {
-            btnMonitor.title = "24/7 Monitoring & Portfolio — View automated alert and portfolio options";
-            btnMonitor.style.background = "#238636";
-            btnMonitor.style.borderColor = "#2ea043";
-        }
-    }
-
-    // Setup / Onboarding banner
-    const setupBanner = document.getElementById("setupBanner");
-    if (setupBanner && !hasPaidFeatures) {
-        setupBanner.style.display = "none";
+        btnMonitorText.textContent = "Real Estate Portfolio";
+        btnMonitor.title = "View Saved Real Estate Portfolio";
+        btnMonitor.style.background = "#238636";
+        btnMonitor.style.borderColor = "#2ea043";
     }
 
     // Portfolio Section (Recent History)
     const proPortfolioWrap = document.getElementById("proPortfolioWrap");
-    const freePortfolioBanner = document.getElementById("freePortfolioBanner");
     if (proPortfolioWrap) {
-        proPortfolioWrap.style.display = hasPaidFeatures ? "block" : "none";
-    }
-    if (freePortfolioBanner) {
-        freePortfolioBanner.style.display = hasPaidFeatures ? "none" : "flex";
+        proPortfolioWrap.style.display = "block";
     }
 
     // Settings Modal - Alerts Panel
     const proAlertsContainer = document.getElementById("proAlertsContainer");
-    const freeAlertsLockCard = document.getElementById("freeAlertsLockCard");
-    const alertsTierBadge = document.getElementById("alertsTierBadge");
     if (proAlertsContainer) {
-        proAlertsContainer.style.display = hasPaidFeatures ? "block" : "none";
+        proAlertsContainer.style.display = "block";
     }
-    if (freeAlertsLockCard) {
-        freeAlertsLockCard.style.display = hasPaidFeatures ? "none" : "block";
-    }
+    const alertsTierBadge = document.getElementById("alertsTierBadge");
     if (alertsTierBadge) {
-        alertsTierBadge.textContent = isPlus ? "PLUS ACTIVE (UP TO 5 PINS)" : "PRO ACTIVE (UNLIMITED)";
+        alertsTierBadge.textContent = "ACTIVE";
     }
 
     // User Registration Modal - Alert Delivery Channels Box
     const regAlertOptionsBox = document.getElementById("regAlertOptionsBox");
     if (regAlertOptionsBox) {
-        regAlertOptionsBox.style.display = hasPaidFeatures ? "block" : "none";
-    }
-
-    // Update Tier Selection Buttons inside Plans Modal
-    const btnFree = document.getElementById("btnSelectTierFree");
-    const btnPlus = document.getElementById("btnSelectTierPlus");
-    const btnPro = document.getElementById("btnSelectTierPro");
-    if (btnFree) {
-        btnFree.textContent = normalized === "free" ? "✓ Active Tier (Free)" : "Switch to Free Tier";
-        btnFree.disabled = normalized === "free";
-    }
-    if (btnPlus) {
-        btnPlus.textContent = isPlus ? "✓ Active Tier (Plus • 5 PINs)" : "Activate Plus Tier ($99/yr)";
-        btnPlus.disabled = isPlus;
-    }
-    if (btnPro) {
-        btnPro.textContent = isPro ? "✓ Active Tier (Pro • Unlimited)" : "Activate Pro Tier ($149/yr)";
-        btnPro.disabled = isPro;
+        regAlertOptionsBox.style.display = "block";
     }
 
     // Footer Text
     const footerText = document.getElementById("footerEditionText");
     if (footerText) {
-        const buildInfo = `${ver} (Build ${window.BUILD_NUMBER || "20261002.1"} &bull; ${window.BUILD_DATE || "2026-10-02"})`;
-        if (isPro) {
-            footerText.innerHTML = `TitleRiskScanner Pro &bull; ${buildInfo} &bull; Developed by <strong style="color:#c9d1d9">SachAI LLC</strong> &bull; 2026`;
-        } else if (isPlus) {
-            footerText.innerHTML = `TitleRiskScanner Plus (Up to 5 Properties) &bull; ${buildInfo} &bull; Developed by <strong style="color:#c9d1d9">SachAI LLC</strong> &bull; 2026`;
-        } else {
-            footerText.innerHTML = `TitleRiskScanner Free Edition &bull; ${buildInfo} &bull; Developed by <strong style="color:#c9d1d9">SachAI LLC</strong> &bull; 2026`;
-        }
+        const buildInfo = `${ver} (Build ${window.BUILD_NUMBER || "20261105.1"} &bull; ${window.BUILD_DATE || "2026-11-05"})`;
+        footerText.innerHTML = `TitleRiskScanner &bull; ${buildInfo} &bull; Developed by <strong style="color:#c9d1d9">SachAI LLC</strong> &bull; 2026`;
     }
 
-    // If Plus or Pro, load portfolio
-    if (hasPaidFeatures) {
-        renderPortfolio();
-    }
+    renderPortfolio();
 }
 
 window.appLicenseInfo = null;
@@ -4642,136 +4321,9 @@ function updateLicenseModalState(infoData) {
     }
 }
 
-async function activateLicenseCode() {
-    const emailEl = document.getElementById("licenseEmailInput");
-    const inputEl = document.getElementById("licenseCodeInput");
-    const msgEl = document.getElementById("licenseActivateMsg");
-    const btnEl = document.getElementById("btnActivateCode");
-    const email = emailEl ? emailEl.value.trim() : "";
-    const code = inputEl ? inputEl.value.trim() : "";
-    if (!code) return;
 
-    if (btnEl) btnEl.disabled = true;
-    if (msgEl) {
-        msgEl.style.color = "#8b949e";
-        msgEl.textContent = "Verifying activation code...";
-        msgEl.style.display = "block";
-    }
 
-    try {
-        const res = await fetch(getApiBase() + "/api/v1/app/activate", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ code, email }),
-        });
-        const data = await res.json();
-        if (!res.ok) {
-            const err = (data && (data.detail || data.message)) || "Invalid activation code.";
-            if (msgEl) {
-                msgEl.style.color = "#f85149";
-                msgEl.innerHTML = `❌ <strong>Activation Failed:</strong> ${esc(err)}`;
-                msgEl.style.display = "block";
-            }
-            if (btnEl) btnEl.disabled = false;
-            return;
-        }
-        updateLicenseModalState(data);
-        applyEditionUI(data.edition || "pro");
-        if (inputEl) inputEl.value = "";
-        if (msgEl) {
-            msgEl.style.color = "#3fb950";
-            msgEl.innerHTML = `🎉 <strong>${esc(data.activation_message || "License activated!")}</strong>`;
-            msgEl.style.display = "block";
-        }
-    } catch (e) {
-        // Standalone / On-Device Mobile Fallback Verification
-        const offlineRes = await verifyLicenseOffline(code, email);
-        if (!offlineRes.valid) {
-            if (msgEl) {
-                msgEl.style.color = "#f85149";
-                msgEl.innerHTML = `❌ <strong>Activation Failed:</strong> ${esc(offlineRes.error || "Invalid activation code.")}`;
-                msgEl.style.display = "block";
-            }
-        } else {
-            updateLicenseModalState({ license: offlineRes });
-            applyEditionUI(offlineRes.edition);
-            if (inputEl) inputEl.value = "";
-            if (msgEl) {
-                msgEl.style.color = "#3fb950";
-                msgEl.innerHTML = `🎉 <strong>TitleRiskScanner ${esc(offlineRes.edition.toUpperCase())} activated on this device! (Valid until ${esc(offlineRes.expires_at)})</strong>`;
-                msgEl.style.display = "block";
-            }
-        }
-    } finally {
-        if (btnEl) btnEl.disabled = false;
-    }
-}
 
-async function switchAppTier(targetTier) {
-    const msgEl = document.getElementById("licenseActivateMsg");
-    const emailEl = document.getElementById("licenseEmailInput");
-    const inputEl = document.getElementById("licenseCodeInput");
-    const email = emailEl ? emailEl.value.trim() : "";
-    const code = inputEl ? inputEl.value.trim() : "";
-
-    try {
-        const res = await fetch(getApiBase() + "/api/v1/app/edition", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ edition: targetTier, code, email }),
-        });
-        const data = await res.json();
-        if (res.ok) {
-            updateLicenseModalState(data);
-            applyEditionUI(data.edition || targetTier);
-            if (targetTier === "free") {
-                closeProModal();
-            }
-            return;
-        }
-        // Prompt user to enter their Promo Code or License Key in the input box
-        if (inputEl) {
-            inputEl.focus();
-            inputEl.scrollIntoView({ behavior: "smooth", block: "center" });
-        }
-        if (msgEl) {
-            msgEl.style.color = "#f2cc60";
-            msgEl.innerHTML = `🔑 <strong>Activation Code Required:</strong> Enter your <strong>${esc(targetTier.toUpperCase())}</strong> Promo Code (or Email + License Key) above and click <strong>Activate Tier</strong>.`;
-            msgEl.style.display = "block";
-        }
-    } catch (_) {
-        // Standalone / On-Device Mobile Tier Switching
-        if (targetTier === "free") {
-            updateLicenseModalState({ license: null });
-            applyEditionUI("free");
-            closeProModal();
-            return;
-        }
-        if (code) {
-            await activateLicenseCode();
-            return;
-        }
-        try {
-            const savedLicRaw = safeStorage.getItem("TITLERISK_ACTIVE_LICENSE");
-            if (savedLicRaw) {
-                const savedLic = JSON.parse(savedLicRaw);
-                if (savedLic && savedLic.active && (savedLic.edition === targetTier || savedLic.edition === "pro")) {
-                    applyEditionUI(targetTier);
-                    return;
-                }
-            }
-        } catch (_) {}
-        if (inputEl) {
-            inputEl.focus();
-            inputEl.scrollIntoView({ behavior: "smooth", block: "center" });
-        }
-        if (msgEl) {
-            msgEl.style.color = "#f2cc60";
-            msgEl.innerHTML = `🔑 <strong>Activation Code Required:</strong> Enter your <strong>${esc(targetTier.toUpperCase())}</strong> Promo Code or License Key above and click <strong>Activate Tier</strong>.`;
-            msgEl.style.display = "block";
-        }
-    }
-}
 
 async function fetchAppInfo() {
     const urlParams = new URLSearchParams(window.location.search);
@@ -4812,67 +4364,12 @@ async function fetchAppInfo() {
     applyEditionUI("free");
 }
 
-let _quizState = { role: 'homeowner', props: '1', alerts: 'realtime' };
 
-function setQuizAnswer(q, val, btn) {
-    _quizState[q] = val;
-    const parent = btn.parentElement;
-    if (parent) {
-        parent.querySelectorAll('.plan-quiz-btn').forEach(b => b.classList.remove('active'));
-    }
-    btn.classList.add('active');
-    updateQuizRecommendation();
-}
 
-function updateQuizRecommendation() {
-    let recTier = 'plus';
-    let text = '';
-    
-    if (_quizState.props === 'unlimited' || _quizState.role === 'pro') {
-        recTier = 'pro';
-        text = '<strong>Recommended for you: Pro Tier ($149/yr or $99 Founders License)</strong> — Unlimited watchlists, client report sharing, and multi-county monitoring.';
-    } else if (_quizState.alerts === 'manual' && _quizState.props === '1') {
-        recTier = 'free';
-        text = '<strong>Recommended for you: Free Tier ($0)</strong> — Unlimited point-in-time property investigations without automated background alerts.';
-    } else {
-        recTier = 'plus';
-        text = '<strong>Recommended for you: Plus Tier ($99/yr)</strong> — 24/7 automated deed, lien, and tax alerts for up to 5 properties (~$1.65/mo per parcel).';
-    }
 
-    const recBarText = document.getElementById('quizRecText');
-    if (recBarText) recBarText.innerHTML = text;
-
-    ['Free', 'Plus', 'Pro'].forEach(t => {
-        const card = document.getElementById('tierCard' + t);
-        if (card) {
-            if (t.toLowerCase() === recTier) {
-                card.classList.add('recommended-tier');
-            } else {
-                card.classList.remove('recommended-tier');
-            }
-        }
-    });
-}
 
 function openProModal(highlightTier) {
-    if (!window.termsAccepted && safeStorage.getItem("TITLERISK_TERMS_ACCEPTED_V1_5") !== "true") {
-        window._pendingUpgradeAfterTerms = highlightTier || "pro";
-        window._pendingInvestigationAfterTerms = false;
-        const gateModal = document.getElementById("termsGateModal");
-        if (gateModal) gateModal.classList.add("active");
-        return;
-    }
-    const modal = document.getElementById("proModal");
-    if (modal) {
-        applyEditionUI(window.appEdition);
-        updateLicenseModalState(null);
-        updateQuizRecommendation();
-        modal.classList.add("active");
-        const msg = document.getElementById("proWaitlistMsg");
-        if (msg) msg.style.display = "none";
-        const actMsg = document.getElementById("licenseActivateMsg");
-        if (actMsg) actMsg.style.display = "none";
-    }
+    scrollToPortfolio();
 }
 
 function closeProModal() {
@@ -4880,66 +4377,7 @@ function closeProModal() {
     if (modal) modal.classList.remove("active");
 }
 
-async function submitProWaitlist() {
-    const emailInput = document.getElementById("proWaitlistEmail");
-    const tierSelect = document.getElementById("proWaitlistTier");
-    const btn = document.getElementById("btnProWaitlist");
-    const msg = document.getElementById("proWaitlistMsg");
-    const email = emailInput ? emailInput.value.trim() : "";
-    const requestedTier = tierSelect ? tierSelect.value : "pro";
-    if (!email) return;
 
-    try {
-        safeStorage.setItem("TITLERISK_PRO_WAITLIST_EMAIL", email);
-    } catch (_) {}
-
-    if (btn) {
-        btn.disabled = true;
-        btn.innerHTML = "⏳ Sending Request...";
-    }
-    if (msg) msg.style.display = "none";
-
-    let confirmedMessage = `✅ Upgrade request sent! We received your request for <strong>TitleRiskScanner ${esc(requestedTier.toUpperCase().replace("_", " "))}</strong> (<strong>${esc(email)}</strong>) and will email your multi-device activation key shortly.`;
-
-    try {
-        const res = await fetch(`${API_BASE}/app/request-license`, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ email, requested_tier: requestedTier })
-        });
-        if (res.ok) {
-            const data = await res.json();
-            if (data.message) confirmedMessage = esc(data.message);
-        } else {
-            throw new Error("Backend fallback");
-        }
-    } catch (_) {
-        // Silent direct HTTPS Cloud Relay fallback (for standalone Mobile / Offline backend)
-        try {
-            await fetch("https://formsubmit.co/ajax/info@sachaiapps.com", {
-                method: "POST",
-                headers: { "Content-Type": "application/json", "Accept": "application/json" },
-                body: JSON.stringify({
-                    _subject: `[TitleRiskScanner] New ${requestedTier.toUpperCase()} Upgrade Request from ${email}`,
-                    _captcha: "false",
-                    Customer_Email: email,
-                    Requested_Tier: `TitleRiskScanner ${requestedTier.toUpperCase()}`
-                })
-            });
-        } catch (_e) {}
-    } finally {
-        if (btn) {
-            btn.disabled = false;
-            btn.innerHTML = "Request Activation Key &rarr;";
-        }
-    }
-
-    if (msg) {
-        msg.innerHTML = confirmedMessage;
-        msg.style.display = "block";
-    }
-    if (emailInput) emailInput.value = "";
-}
 
 function setEndpointPreset(url) {
     const input = document.getElementById("setCustomApiUrl");
@@ -6383,38 +5821,73 @@ function renderLiens(liens) {
     document.getElementById("liensPanel").innerHTML = buildLiensHtml(liens);
 }
 
-/* ========== Portfolio (SQLite-backed) ========== */
+/* ========== Portfolio (Local & SQLite-backed) ========== */
+
+function getLocalPortfolio() {
+    try {
+        const raw = safeStorage.getItem("TITLERISK_LOCAL_PORTFOLIO");
+        return raw ? JSON.parse(raw) : [];
+    } catch (_) { return []; }
+}
+function setLocalPortfolio(list) {
+    try {
+        safeStorage.setItem("TITLERISK_LOCAL_PORTFOLIO", JSON.stringify((list || []).slice(0, 50)));
+    } catch (_) {}
+}
 
 async function loadPortfolio() {
+    const localList = getLocalPortfolio();
+    if (getApiBase() === "") {
+        return localList;
+    }
     try {
         const resp = await fetch(getApiBase() + "/api/v1/portfolio");
         const rawText = await resp.text();
         let data = {};
         try { data = JSON.parse(rawText); } catch (_) { data = {}; }
         if (!resp.ok) throw new Error(data.detail || rawText || `HTTP ${resp.status}`);
-        return data.entries || [];
+        const serverList = data.entries || [];
+        if (serverList.length > 0) return serverList;
+        return localList;
     } catch (e) {
         console.warn("loadPortfolio error:", e);
-        return [];
+        return localList;
     }
 }
 
-function addToPortfolio() {
+function addToPortfolio(data) {
+    if (data && data.parcel_id) {
+        try {
+            let list = getLocalPortfolio();
+            const pin = data.parcel_id || "";
+            list = list.filter(item => item.pin !== pin);
+            list.unshift({
+                id: "local_" + Date.now(),
+                pin: pin,
+                address: data.property_address || data.address || "N/A",
+                city: data.city || data.municipality || "Cook County",
+                risk: data.overall_risk || "LOW",
+                findingsCount: (data.findings || []).length,
+                assessedTotal: data.assessed_value || data.total_assessed || 0,
+                investigatedAt: new Date().toISOString()
+            });
+            setLocalPortfolio(list);
+        } catch (_) {}
+    }
     renderPortfolio();
 }
 
 async function removeFromPortfolio(id, ev) {
     if (ev) ev.stopPropagation();
     try {
-        const resp = await fetch(getApiBase() + "/api/v1/portfolio/" + encodeURIComponent(id), { method: "DELETE" });
-        if (!resp.ok) {
-            const rawText = await resp.text();
-            let data = {};
-            try { data = JSON.parse(rawText); } catch (_) {}
-            showError(data.detail || rawText || "Failed to remove portfolio entry");
+        let list = getLocalPortfolio();
+        list = list.filter(item => item.id !== id);
+        setLocalPortfolio(list);
+        if (getApiBase() !== "") {
+            await fetch(getApiBase() + "/api/v1/portfolio/" + encodeURIComponent(id), { method: "DELETE" });
         }
     } catch (e) {
-        showError(e.message || "Failed to remove portfolio entry");
+        console.warn("removeFromPortfolio error:", e);
     }
     renderPortfolio();
 }
@@ -6448,17 +5921,13 @@ async function handleClearPortfolioClick(btn) {
 
     resetClearPortfolioBtn();
     try {
-        const resp = await fetch(getApiBase() + "/api/v1/portfolio", { method: "DELETE" });
-        if (!resp.ok) {
-            const rawText = await resp.text();
-            let data = {};
-            try { data = JSON.parse(rawText); } catch (_) {}
-            showError(data.detail || rawText || "Failed to clear portfolio");
-            return;
+        safeStorage.removeItem("TITLERISK_LOCAL_PORTFOLIO");
+        if (getApiBase() !== "") {
+            await fetch(getApiBase() + "/api/v1/portfolio", { method: "DELETE" });
         }
         showCopyToast("Recent portfolio history cleared");
     } catch (e) {
-        showError(e.message || "Failed to clear portfolio");
+        console.warn("clearPortfolio error:", e);
     }
     renderPortfolio();
 }
@@ -6468,36 +5937,21 @@ async function clearPortfolio() {
 }
 
 async function renderPortfolio() {
-    if (window.appEdition === "free") return;
     let entries = [];
     try {
         entries = await loadPortfolio();
     } catch (e) {
-        showError("Could not load history from server: " + (e.message || e));
-        hideResults();
-        return;
+        console.warn("Could not load portfolio:", e);
+        entries = getLocalPortfolio();
     }
 
-    const isPlus = window.appEdition === "plus";
     const subEl = document.getElementById("portfolioTierSub");
     if (subEl) {
-        if (isPlus) {
-            subEl.innerHTML = `Saved locally on your device &bull; <strong style="color:#3fb950">Plus Tier (${entries.length} / 5 Properties Used)</strong>`;
-        } else {
-            subEl.innerHTML = `Saved locally on your device &bull; <strong style="color:#58a6ff">Pro Tier (Unlimited Properties)</strong>`;
-        }
-    }
-
-    const limitBanner = document.getElementById("portfolioLimitBanner");
-    if (limitBanner) {
-        if (isPlus && (entries.length >= 5 || window._lastPortfolioLimitReached)) {
-            limitBanner.style.display = "flex";
-        } else {
-            limitBanner.style.display = "none";
-        }
+        subEl.innerHTML = `Saved locally on your device &bull; <strong style="color:#58a6ff">Unlimited Properties</strong>`;
     }
 
     const tbody = document.getElementById("portfolioBody");
+    if (!tbody) return;
     if (entries.length === 0) {
         tbody.innerHTML = `<tr><td colspan="9" class="portfolio-empty">No properties investigated yet. Run an investigation to see your recent search history.</td></tr>`;
         return;
@@ -6523,6 +5977,16 @@ async function renderPortfolio() {
 }
 
 async function showDetail(id) {
+    if (String(id).startsWith("local_")) {
+        const localList = getLocalPortfolio();
+        const item = localList.find(e => e.id === id);
+        if (item) {
+            if (item.address && item.address !== "N/A") document.getElementById("address").value = item.address;
+            if (item.pin && item.pin !== "N/A") document.getElementById("pin").value = item.pin;
+            runInvestigation();
+            return;
+        }
+    }
     let entry;
     try {
         const resp = await fetch(getApiBase() + "/api/v1/portfolio/" + encodeURIComponent(id));
@@ -6719,9 +6183,8 @@ function acceptMandatoryTermsGate() {
         }
         runInvestigation();
     } else if (window._pendingUpgradeAfterTerms) {
-        const pendingTier = window._pendingUpgradeAfterTerms;
         window._pendingUpgradeAfterTerms = null;
-        openProModal(pendingTier);
+        scrollToPortfolio();
     } else {
         if (!hasInput && addrInput) {
             addrInput.value = "69 W Washington St, Chicago";
@@ -6804,12 +6267,12 @@ function openUserModal() {
         document.getElementById("regAlertEmail").checked = currentUserProfile.alert_email !== false;
         document.getElementById("regAlertPhone").checked = !!currentUserProfile.alert_phone;
         document.getElementById("regAgreement").checked = !!currentUserProfile.agreement_accepted || !!window.termsAccepted;
-        document.getElementById("userModalTitle").textContent = "👤 Edit User Profile";
+        document.getElementById("userModalTitle").textContent = "👤 User Profile & Alert Preferences";
         document.getElementById("btnSaveReg").textContent = "Update Profile";
     } else {
         document.getElementById("regAgreement").checked = !!(currentUserProfile && currentUserProfile.agreement_accepted) || !!window.termsAccepted;
-        document.getElementById("userModalTitle").textContent = "👤 User Registration & Profile";
-        document.getElementById("btnSaveReg").textContent = "Save & Register";
+        document.getElementById("userModalTitle").textContent = "👤 Register for Free Updates & Alerts";
+        document.getElementById("btnSaveReg").textContent = "Register for Free Updates";
     }
 
     document.getElementById("userModal").classList.add("active");
